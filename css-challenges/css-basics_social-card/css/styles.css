@@ -4,5 +4,10 @@
   padding: 0;
 }
 
-header {
+body {
+  font-family: Trebuchet MS, sans-serif;
+  background-color: whitesmoke;
+}
+
+image {
 }
