@@ -9,8 +9,14 @@ body {
   background-color: whitesmoke;
 }
 
+.main-content {
+  width: 80%;
+  margin: auto;
+  padding-top: 20px;
+
 .main section {
   padding: 10px;
   background-color: white;
   border-radius: 30px;
 }
+
