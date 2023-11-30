@@ -6,17 +6,31 @@
 
 body {
   font-family: Trebuchet MS, sans-serif;
-  background-color: whitesmoke;
+  background-color: grey;
 }
 
-.main-content {
+.body-of-complete-social-card {
   width: 80%;
-  margin: auto;
-  padding-top: 20px;
+  margin: 20px;
+  padding: 20px;
+}
 
-.main section {
+.white-round-box {
+  align-self: center;
+  height: 300px;
   padding: 10px;
   background-color: white;
-  border-radius: 30px;
+  margin: 20px;
+  border-radius: 50px;
 }
 
+.box--white {
+  background-color: white;
+  align-self: center;
+}
+
+.astronaut-pic {
+  padding: auto;
+  width: 260px;
+  align-self: left;
+}
