@@ -87,18 +87,39 @@ h1 {
   }
 }
 
-.box--three {
-  background-color: lightpink;
+@media (orientation: portrait) {
+  .box--three {
+    background-color: lightpink;
 
-  width: 50px;
-  height: 250px;
+    width: 50px;
+    height: 250px;
+  }
 }
 
-.box--four {
-  background-color: lightgray;
+@media (orientation: landscape) {
+  .box--three {
+    background-color: lightpink;
 
-  width: 100px;
-  height: 100px;
+    width: 250px;
+    height: 50px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .box--four {
+    background-color: grey;
+
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .box--four {
+    background-color: green;
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .box--five {
