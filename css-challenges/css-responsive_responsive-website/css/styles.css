@@ -240,14 +240,55 @@ fairly essential to completing this challenge. */
 
 /* Now it's your turn! Here we're using media queries to partially overwrite our
 CSS when certain conditions that we declare are met - such as a certain viewport 
-width, etc. */
+width, etc. 
 
+work on tablet first then desktop! */
+
+/* FIRST mobile - tablet - desktop */
 /* Media Query Tablet */
-/* --- */
-@media screen {
+
+/* first give card section a different flex-direction and a wrap*/
+
+@media screen and (min-width: 900px) {
+  .card-section {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .card-section > * {
+    width: 45%;
+  }
+  .intro-text {
+    align-self: flex-start;
+  }
 }
 
 /* Media Query Desktop */
-/* --- */
-/* Replace this comment with your media query. */
-/* --- */
+/* creating a second breaktin point at 1200px */
+
+@media (min-width: 1200px) {
+  body,
+  .main-header,
+  .navbar {
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  .card-section {
+    overflow-x: hidden;
+    padding-bottom: 50px;
+  }
+
+  .product-card.--forest {
+    width: 100vw;
+    height: 500px;
+  }
+
+  .intro-text {
+    align-self: flex-start;
+  }
+
+  .main-content {
+    padding: 0;
+  }
+}
