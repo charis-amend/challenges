@@ -20,7 +20,10 @@ body {
   grid-template-rows: 300px 200px 300px;
   gap: 1rem;
   padding: 1rem;
-  /* Add styles here */
+  grid-template-areas:
+    "image--4 image--2 image--6"
+    "image--1 image--2 image--3"
+    "image--1 image--5 image--3";
 }
 
 .image-board__image {
@@ -32,25 +35,25 @@ body {
 }
 
 .image-board__image--1 {
-  /* Add styles here */
+  grid-area: image--1;
 }
 
 .image-board__image--2 {
-  /* Add styles here */
+  grid-area: image--2;
 }
 
 .image-board__image--3 {
-  /* Add styles here */
+  grid-area: image--3;
 }
 
 .image-board__image--4 {
-  /* Add styles here */
+  grid-area: image--4;
 }
 
 .image-board__image--5 {
-  /* Add styles here */
+  grid-area: image--5;
 }
 
 .image-board__image--6 {
-  /* Add styles here */
+  grid-area: image--6;
 }
