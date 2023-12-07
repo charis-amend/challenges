@@ -10,6 +10,12 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+const titlePost = "This is the social media post title";
+const textPost =
+  "here is a long text for the social media post. the post is about variables and numbers in the language javascript. you can seee thee text of the post is even going on and on.";
+let numberLikes = 34;
+const userNameCreatedPost = "Santa Claus";
+let isReported = true;
 
 // --^-- write your code here --^--
 
