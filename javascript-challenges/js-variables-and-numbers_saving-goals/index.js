@@ -17,3 +17,11 @@ Print the result by using console.log to display the total savings you'll have a
 
 After 12 months of saving, you will have $4000 in your account.
 Run your JavaScript program to see how much money you'll have saved after the specified time period. */
+
+const startingBalance = 1200;
+const monthlyContribution = 300;
+const months = 12;
+
+let totalSavings = startingBalance + monthlyContribution * months;
+
+console.log("shows total savings after 12 months: ", totalSavings);
