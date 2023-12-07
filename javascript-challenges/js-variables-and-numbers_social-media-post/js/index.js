@@ -24,5 +24,9 @@ let isReported = true;
 */
 
 // --v-- write your code here --v--
-
+console.log("shows titlePost:", titlePost);
+console.log("shows textpost:", textPost);
+console.log("shows numberoflikes", numberLikes);
+console.log("shows username:", userNameCreatedPost);
+console.log("shows if post isReported", isReported);
 // --^-- write your code here --^--
