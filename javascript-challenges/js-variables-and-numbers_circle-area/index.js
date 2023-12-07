@@ -23,4 +23,5 @@ let radiusCircle = 5;
 let circleArea = Math.PI * Math.pow(radiusCircle, 2);
 console.log("shows circle area: ", circleArea);
 
-let circumference = null;
+let circumference = 2 * Math.PI * radiusCircle; // Circle Umfang = 2*π*r
+console.log("shows circumference of circle:", circumference);
