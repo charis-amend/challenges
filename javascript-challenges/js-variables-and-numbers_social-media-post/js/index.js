@@ -29,4 +29,10 @@ console.log("shows textpost:", textPost);
 console.log("shows numberoflikes", numberLikes);
 console.log("shows username:", userNameCreatedPost);
 console.log("shows if post isReported", isReported);
+
+// increasing likes by one +1
+
+numberLikes += 1;
+console.log("show numberofLikes with one added", numberLikes);
+
 // --^-- write your code here --^--
