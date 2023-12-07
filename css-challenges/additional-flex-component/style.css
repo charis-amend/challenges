@@ -64,6 +64,7 @@ footer {
   color: white;
 }
 
+/* no 1 */
 .flex-container {
   gap: 1rem;
   background-color: #55a630;
@@ -72,6 +73,56 @@ footer {
 }
 
 .flex-item {
+  background-color: #4361ee;
+  color: white;
+}
+
+/* no 2 equally spaced */
+.flex-container.flex-on-children {
+  gap: 1rem;
+  background-color: #55a630;
+  display: flex;
+  justify-content: space-between;
+}
+.flex-container.flex-on-children > .flex-item {
+  background-color: #4361ee;
+  color: white;
+  flex: 1;
+}
+
+/* no 3 one element bigger */
+.flex-container.flex-on-children > .flex-item.bigger {
+  background-color: #4361ee;
+  color: white;
+  flex: 3;
+}
+
+.flex-container.flex-on-children > .flex-item:nth-child(2) {
+  background-color: #4361ee;
+  color: white;
+  flex: 1;
+}
+
+.flex-container.flex-on-children > .flex-item:nth-child(3) {
+  background-color: #4361ee;
+  color: white;
+  flex: 1;
+}
+
+/* no 4 one element biggest, bigger, big */
+.flex-container.flex-on-children > .flex-item.bigger {
+  background-color: #4361ee;
+  color: white;
+  flex: 2;
+}
+
+.flex-container.flex-on-children > .flex-item.biggest {
+  background-color: #4361ee;
+  color: white;
+  flex: 4;
+}
+
+.flex-container.flex-on-children > .flex-item:nth-child(3) {
   background-color: #4361ee;
   color: white;
   flex: 1;
