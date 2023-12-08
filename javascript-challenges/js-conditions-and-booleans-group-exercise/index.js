@@ -25,6 +25,6 @@ const allSheep = [
   true,
 ];
 
-const SheepOnTheField = allSheep.filter(Boolean);
-const finalNumberOfSheepOnField = SheepOnTheField.length;
+let SheepOnTheField = allSheep.filter(Boolean);
+let finalNumberOfSheepOnField = SheepOnTheField.length;
 console.log("shows present sheep:", finalNumberOfSheepOnField);

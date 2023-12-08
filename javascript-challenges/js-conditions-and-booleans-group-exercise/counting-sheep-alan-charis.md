@@ -6,10 +6,10 @@
 4. to describe the sheep that is on the field we say true
 5. to describe the sheep that are not on the field we say false.
 
-6. this is the mentioned list of sheep:
+6. this is the mentioned list of ALLsheep:
 
 ```js
-const SheepOnTheField = [
+const allSheep = [
   true,
   true,
   true,
@@ -37,21 +37,24 @@ const SheepOnTheField = [
 ];
 ```
 
-7. instead of counting, we are gonna write a set of statements.
-8. this statement says first:
-   1. we define the number of all sheeps with const arrayListofSheep
-   2. then we create a name for the sheeps that are on the field this name is const arrayListofpresentSheep
-   3. then we can calculate the number of sheeps on the field when we take the name const arrayListofpresentSheep and put a "=" symbol after it
-   4. this means equal
-   5. after the equal sign (=) we put a filter that shows all the sheep on the field.
-   6. this filter looks like this arrayListofSheep.filter(true)
-   7. after this filter we directly have to put the length because this shows as the number of the filtered sheep on the field.
-   8. to test if we are correct, we print our results.
-   9. you do this with console.log
-   10. and in this console.log you put the name we created for all present sheep on the field.
+7. we are counting the list of allSheep
+   const allSheep;
+8. we have a variable for the sheep on the field
+   let SheepOnTheField;
+9. then we count the number of sheeps on the field with a filter
+   let SheepOnTheField = allSheep.filter(Boolean);
+   for the true sheep and false sheep we need a boolean filter
+10. we create a variable for the finalnumber of sheep on the field
+    let finalNumberOfSheepOnField;
+11. we calculate the number by using .length
+    let finalNumberOfSheepOnField = SheepOnTheField.length;
+
+12. to test if we are correct, we print our results.
+13. you do this with console.log
+    console.log("shows present sheep:", finalNumberOfSheepOnField);
 
 ```js
-const SheepOnTheField = allSheep.filter(Boolean);
-const finalNumberOfSheepOnField = SheepOnTheField.length;
+let SheepOnTheField = allSheep.filter(Boolean);
+let finalNumberOfSheepOnField = SheepOnTheField.length;
 console.log("shows present sheep:", finalNumberOfSheepOnField);
 ```
