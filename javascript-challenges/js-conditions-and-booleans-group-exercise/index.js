@@ -1,4 +1,4 @@
-const arrayListofSheep = [
+const allSheep = [
   true,
   true,
   true,
@@ -25,5 +25,6 @@ const arrayListofSheep = [
   true,
 ];
 
-const arrayListofpresentSheep = arrayListofSheep.filter(true).length;
-console.log("shows present sheep :", arrayListofpresentSheep);
+const SheepOnTheField = allSheep.filter(Boolean);
+const finalNumberOfSheepOnField = SheepOnTheField.length;
+console.log("shows present sheep:", finalNumberOfSheepOnField);
