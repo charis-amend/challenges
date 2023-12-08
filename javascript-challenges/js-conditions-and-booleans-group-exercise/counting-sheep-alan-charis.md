@@ -9,7 +9,7 @@
 6. this is the mentioned list of sheep:
 
 ```js
-const arrayListofSheep = [
+const SheepOnTheField = [
   true,
   true,
   true,
@@ -51,6 +51,7 @@ const arrayListofSheep = [
    10. and in this console.log you put the name we created for all present sheep on the field.
 
 ```js
-const arrayListofpresentSheep = arrayListofSheep.filter(true).length;
-console.log(arrayListofpresentSheep);
+const SheepOnTheField = allSheep.filter(Boolean);
+const finalNumberOfSheepOnField = SheepOnTheField.length;
+console.log("shows present sheep:", finalNumberOfSheepOnField);
 ```
