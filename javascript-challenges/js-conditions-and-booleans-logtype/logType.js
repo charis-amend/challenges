@@ -1,7 +1,7 @@
-const data = 123;
+const data = function () {};
 
 switch (typeof data) {
-  case "undefined!":
+  case undefined:
     console.log("undefined!");
     break;
 
@@ -13,7 +13,7 @@ switch (typeof data) {
     console.log("number!");
     break;
 
-  case "notanumber":
+  case 0:
     console.log("not a number!");
     break;
 
@@ -43,4 +43,5 @@ switch (typeof data) {
 
   default:
     console.log("i have no idea!");
+    break;
 }
