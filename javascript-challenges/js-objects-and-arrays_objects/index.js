@@ -4,7 +4,9 @@ console.clear();
 // Create an object personWithNameAgeEmail with the properties "name", "age" and "email".
 
 const personWithNameAgeEmail = {
-  example: "example",
+  name: "dieter",
+  age: 100,
+  email: "dieter@email.com",
 };
 
 // EXERCISE 2
@@ -14,9 +16,12 @@ const personAlex = {
   name: "Alex",
   age: 24,
 };
+personWithNameAgeEmail.name = personAlex.name;
+personWithNameAgeEmail.age = personAlex.age;
+console.log(personWithNameAgeEmail);
 
-const nameOfAlex = "Change me";
-const ageOfAlex = "Change me";
+// const nameOfAlex = "Change me";
+// const ageOfAlex = "Change me";
 
 // EXERCISE 3
 // Change the value of name to "Alex" and the value of age to "35" by updating the object personToChange: person.existingProperty = newValue.
