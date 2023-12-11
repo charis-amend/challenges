@@ -1,8 +1,8 @@
-const data = function () {};
+const data = 123;
 
 switch (typeof data) {
   case undefined:
-    console.log("undefined!");
+    console.log(typeof data, "undefined!");
     break;
 
   case data === null:
@@ -10,7 +10,7 @@ switch (typeof data) {
     break;
 
   case 123:
-    console.log("number!");
+    console.log(typeof data, "number!");
     break;
 
   case 0:
