@@ -6,7 +6,7 @@ switch (typeof data) {
     break;
 
   case data === null:
-    console.log("null!");
+    console.log(typeof data, "null!");
     break;
 
   case 123:
