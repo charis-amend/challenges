@@ -11,23 +11,33 @@ They should return the result of the respective calculation:
 */
 
 function add(a, b) {
-  // Code here
+  // add: the sum of the two numbers
+  const resultAdding = a + b;
+  return resultAdding;
 }
 
 function subtract(a, b) {
-  // Code here
+  // subtract: the difference between the two numbers
+  const resultSubtract = a - b;
+  return resultSubtract;
 }
 
 function multiply(a, b) {
-  // Code here
+  // multiply: the product of the numbers
+  const resultMultiply = a * b;
+  return resultMultiply;
 }
 
 function divide(a, b) {
   // Code here
+  const resultDivided = a / b;
+  return resultDivided;
 }
 
 function remainder(a, b) {
   // Code here
+  const resultRemainder = a % b;
+  return resultRemainder;
 }
 
 /*
