@@ -7,16 +7,19 @@ console.log("Exercise 1:");
 */
 
 // Uncomment the next line of code and figure out why it does not work:
-// logText;
+logText;
 
 function logText() {
   console.log("This text does not appear. Why?");
 }
+//putting logText after function
+logText();
 
 console.log("-------------");
 console.log("Exercise 2:");
 /*
-2: Look at the functions below. They are almost identical. Can you find a way to generalize them into a new function with an input parameter? Replace the function calls below with your new function.
+2: Look at the functions below. They are almost identical. 
+Can you find a way to generalize them into a new function with an input parameter? Replace the function calls below with your new function.
 */
 
 function greetBob() {
