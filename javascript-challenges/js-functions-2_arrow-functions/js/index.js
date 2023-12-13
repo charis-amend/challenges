@@ -5,9 +5,27 @@ Rewrite the following functions as arrow functions.
 Use implicit returns when possible
 */
 
-function getCurrentHour() {
-  const now = new Date();
-  const currentHour = now.getHours();
+// function getCurrentHour() {
+//   const now = new Date();
+//   const currentHour = now.getHours();
+//   if (currentHour === 0) {
+//     return "12am";
+//   } else if (currentHour === 12) {
+//     return "12pm";
+//   } else if (currentHour <= 11) {
+//     return currentHour + "am";
+//   } else {
+//     return currentHour - 12 + "pm";
+//   }
+// }
+
+// rewrite to arrow function:
+
+const now = new Date();
+const currentHour = now.getHours();
+
+const getCurrentHour() => 
+{
   if (currentHour === 0) {
     return "12am";
   } else if (currentHour === 12) {
