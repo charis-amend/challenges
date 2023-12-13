@@ -12,8 +12,8 @@
   </head>
   <body>
     <main>
-      <h1>Service</h1>
-      <h2>Customer complaint form</h2>
+      <h1 id="title">Service</h1>
+      <h2 id="subtitle">Customer complaint form</h2>
       <p>
         Fill out this form to complain to customer support about our poor
         service. Please note that due to an increased volume of requests, it
@@ -23,15 +23,17 @@
         <strong>Note:</strong> This form is not intended to be used for any
         other purpose than to complain to customer support.
       </p>
-      <form data-js="form">
+      <form aria-labelledby="subtitle" data-js="form">
         <fieldset>
           <legend>Personal Information</legend>
-          <label for="first-name">First Name</label>
+          <label aria-required="true" for="first-name">First Name</label>
           <input
             type="text"
             name="firstName"
             id="first-name"
             placeholder="Your first name"
+            required
+            pattern=".{4,30}"
           />
 
           <label for="last-name">Last Name</label>
@@ -40,13 +42,15 @@
             name="lastName"
             id="last-name"
             placeholder="Your last name"
+            required
+            pattern=".{4, 30}"
           />
 
           <label for="age">Age</label>
-          <input type="number" name="age" id="age" />
+          <input type="number" name="age" id="age" required min="14" />
 
           <label for="email">Email</label>
-          <input type="text" name="email" id="email" />
+          <input type="text" name="email" id="email" required />
         </fieldset>
 
         <fieldset>
@@ -90,6 +94,7 @@
               type="checkbox"
               name="terms-of-service"
               id="terms-of-service"
+              required
             />
             I have read the terms of service and agree to sell my soul
             <a
