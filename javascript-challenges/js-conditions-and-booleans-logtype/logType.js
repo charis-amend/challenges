@@ -1,19 +1,25 @@
-const data = 123;
+// let data = function sum(a, b) {};
+// let data = 123;
+// let data = "test";
+// let data ; --> is undefined
+// let data = 9007199254740991n; --> Big Int
+// let data = null; 
+//      needs this: case data === null:
+//     console.log("Null!");
+//     break;
+// let data = [2, 4, 5]
+// let data = true;
 
 switch (typeof data) {
-  case undefined:
-    console.log(typeof data, "undefined!");
+  case "undefined":
+    console.log("undefined!");
     break;
 
-  case data === null:
-    console.log(typeof data, "null!");
+  case "number":
+    console.log("number!");
     break;
 
-  case 123:
-    console.log(typeof data, "number!");
-    break;
-
-  case 0:
+  case "NaN":
     console.log("not a number!");
     break;
 
@@ -21,24 +27,24 @@ switch (typeof data) {
     console.log("string!");
     break;
 
-  case true:
+  case "boolean":
     console.log("boolean!");
     break;
 
-  case 567654356787654567898765n:
+  case "bigint":
     console.log("BigInt!");
     break;
 
-  case function () {}:
+  case "function":
     console.log("function");
     break;
 
-  case Object:
-    console.log("object!");
-    break;
-
-  case Array.isArray(data):
-    console.log("array");
+  case "object":
+    if (Array.isArray(data)) {
+      console.log("Array!");
+    } else {
+      console.log("Object!");
+    }
     break;
 
   default:
