@@ -25,8 +25,23 @@ form.addEventListener("submit", (event) => {
   let result;
 
   // --v-- write your code here --v--
+  const formCalcEntries = new FormData(event.target);
+  console.log("test const formEntries:", formCalcEntries);
+
+  const dataFromEntriesTurnedToObject = Object.fromEntries(formCalcEntries);
+  console.log("shows the data from the entries into the calculator:", dataFromEntriesTurnedToObject);
+
+  resultOutput.textContent = 
+    if (formCalcEntries.event.target.operator.value = "addition") {
+    return function add()
+  };
+}
+  if else {
+  (formCalcEntries.event.target.operator.value = "subtract") {
+    return function subtract()};
+
 
   // --^-- write your code here --^--
 
-  resultOutput.textContent = result;
+  // resultOutput.textContent = result;
 });
