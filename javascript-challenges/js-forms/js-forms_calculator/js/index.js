@@ -40,19 +40,19 @@ form.addEventListener("submit", (event) => {
 
   switch (dataFromEntriesTurnedToObject.operator) {
     case "addition":
-      result = entryForA + entryForB;
+      result = add(entryForA, entryForB);
       break;
 
     case "subtraction":
-      result = entryForA - entryForB;
+      result = subtract(entryForA, entryForB);
       break;
 
     case "multiplication":
-      result = entryForA * entryForB;
+      result = multiply(entryForA, entryForB);
       break;
 
     case "division":
-      result = entryForA / entryForB;
+      result = divide(entryForA, entryForB);
       break;
     default:
       return;
@@ -62,5 +62,4 @@ form.addEventListener("submit", (event) => {
   // --^-- write your code here --^--
 
   resultOutput.textContent = result;
-  console.log("test if first switch works for addition", result);
 });
