@@ -19,6 +19,7 @@ function divide(a, b) {
   return a / b;
 }
 
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -31,17 +32,35 @@ form.addEventListener("submit", (event) => {
   const dataFromEntriesTurnedToObject = Object.fromEntries(formCalcEntries);
   console.log("shows the data from the entries into the calculator:", dataFromEntriesTurnedToObject);
 
-  resultOutput.textContent = 
-    if (formCalcEntries.event.target.operator.value = "addition") {
-    return function add()
+  const entryForA = parseInt(dataFromEntriesTurnedToObject.numberA)
+  console.log("shows new const numberForA and its entered content numberA from html:", entryForA);
+
+  const entryForB = parseInt(dataFromEntriesTurnedToObject.numberB);
+  console.log("shows entry of user for inputB", entryForB);
+
+  switch (dataFromEntriesTurnedToObject.operator) {
+    case "addition":
+      result = entryForA + entryForB;
+      break;
+
+    case "subtraction":
+      result = entryForA - entryForB;
+      break;
+
+    case "multiplication":
+      result = entryForA * entryForB;
+      break;
+
+    case "division":
+      result = entryForA / entryForB;
+      break;
+    default:
+      return;
   };
-}
-  if else {
-  (formCalcEntries.event.target.operator.value = "subtract") {
-    return function subtract()};
 
 
   // --^-- write your code here --^--
 
-  // resultOutput.textContent = result;
+  resultOutput.textContent = result;
+  console.log("test if first switch works for addition", result);
 });
