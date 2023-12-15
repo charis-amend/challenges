@@ -32,9 +32,27 @@ newProductTeaser.innerHTML = `
       </div>
       <footer class="product__footer">
       <span class="product__price"> ${price}</span> 
-        <button type="button" class="product__buy-button">Buy</button>
+      <button type="button" class="product__buy-button" id=buyButtonForSecondProductTeaser>Buy</button>
       </footer>
 
 `
-
 document.body.append(newProductTeaser);
+
+// add an event listener to the "buy" button of the second product teaser. 
+// When clicking the button, the product's name and price should be logged to the console.
+
+// defining new variable for buyButtonForSecondProductTeaser 
+// AND ADD a separate ID in innerHtml above, not in the real html file in this folder!!!!
+// then reference the ID from the 2nd buy button in queryselector
+// BUT MAKE SURE TO USE ID, if you use class you wont get css styling
+
+const buyButtonForSecondProductTeaser = document.querySelector("#buyButtonForSecondProductTeaser");
+
+
+buyButtonForSecondProductTeaser.addEventListener("click", (event) => {
+
+  const name = "Queen angelfish";
+  const price = "149,99 €";
+  console.log("When clicking this button, the product's name and price are logged", name, price
+  );
+});
