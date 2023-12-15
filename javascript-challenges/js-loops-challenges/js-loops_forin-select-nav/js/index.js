@@ -28,10 +28,9 @@ for (let languageOption in languages) {
 
   const optionElement = document.createElement("option")
   optionElement.value = languageOption
-  select.append(optionElement.value)
-  optionElement.append(optionElement.textContent)
-  console.log(optionElement.textContent)
+  optionElement.textContent = languages[languageOption]
 
+  select.append(optionElement)
 }
 // --^-- write/change code here --^--
 
@@ -50,4 +49,17 @@ navElement.append(ul);
 
 // --v-- write/change code here --v--
 
+for (const keysInsideTheObjects in nav) {
+  const navUlListItem = document.createElement("li");
+  const anchorTagOfListItem = document.createElement("a");
+
+  // anchorTagOfListItem.(href = name of the key inside the object:)href = ...
+  // ... <nav> -> keysInsideTheObjects (href and text) ...
+  // we get the value of href&text with nav[keysInsideTheObjects].text & .href
+  navUlListItem.textContent = nav[keysInsideTheObjects].text
+  anchorTagOfListItem.href = nav[keysInsideTheObjects].href;
+
+  ul.append(navUlListItem);
+  navUlListItem.append(anchorTagOfListItem);
+}
 // --^-- write/change code here --^--
