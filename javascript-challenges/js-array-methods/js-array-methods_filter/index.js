@@ -23,13 +23,30 @@ const cards = [
   },
 ];
 
-const onlyCardWithIdTwo = null;
+const onlyCardWithIdTwo = cards.filter((card) => {
+  return card.id === "2";
+});
+// const onlyCardWithIdTwo = cards.filter((card) => card.id === "2");
+// console.log(onlyCardWithIdTwo);
 
-const allCardsWith3Tags = null;
+const allCardsWith3Tags = cards.filter((card) => {
+  return card.tags.length === 3;
+});
+// console.log(allCardsWith3Tags);
 
-const allCardsThatAreNotBookmarked = null;
+const allCardsThatAreNotBookmarked = cards.filter((card) => !card.isBookmarked);
+// !card.isBookmarked is now false
+// console.log(allCardsThatAreNotBookmarked);
 
-const allCardsWithTagsHTMLOrJSThatAreBookmarked = null;
+const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter(
+  (card) =>
+    card.isBookmarked
+    && (card.tags.includes("html") || card.tags.includes("js"))
+);
+// all cards with tags that are bookmarked only use card.isBookmarked 
+// if the card hast the tag html or (use -> "||" ) a js tag: put in one () because card.isBookmarked needs to be always true
+
+console.log(allCardsWithTagsHTMLOrJSThatAreBookmarked);
 
 export {
   onlyCardWithIdTwo,
