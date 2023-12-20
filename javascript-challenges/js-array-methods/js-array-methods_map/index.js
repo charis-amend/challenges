@@ -24,10 +24,42 @@ const cards = [
   },
 ];
 
-const lowerCaseAnswers = null; // ['as often as you like.', ...]
+const lowerCaseAnswers = cards.map((card) => {
+  return card.answer
+});
+console.log(lowerCaseAnswers);
 
-const questionsAndAnswersTogether = null; // ["How often can I use <header>? - As often as you like.", ...]
+const questionsAndAnswersTogether = cards.map((card) => {
+  return `${card.question} - ${card.answer}`
+});
+console.log(questionsAndAnswersTogether);
+// ["How often can I use <header>? - As often as you like.", ...]
 
-const questionAndAnswer = null; // [{ question: 'How often can I use <header>?', answer: 'As often as you like.'}, {...}]
+
+// no3 
+// first option:
+// const questionAndAnswer = cards.map((card) => {
+//   return `question: ${card.question}, answer: ${card.answer}`
+// });
+
+// or second option:
+// starts with => {} -> we need "return"
+const questionAndAnswer = cards.map((card) => {
+  return {
+    question: `${card.question}`,
+    answer: `${card.answer}`
+  }
+});
+
+// or third option:
+// we start with => ( {} ) -> shortcut, we dont need return
+// const questionAndAnswer = cards.map((card) => (
+//   {
+//     question: `${card.question}`,
+//     answer: `${card.answer}`
+//   }
+// ));
+console.log(questionAndAnswer);
+// [{ question: 'How often can I use <header>?', answer: 'As often as you like.'}, {...}]
 
 export { lowerCaseAnswers, questionsAndAnswersTogether, questionAndAnswer };
