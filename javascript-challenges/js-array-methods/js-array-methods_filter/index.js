@@ -40,7 +40,8 @@ const allCardsThatAreNotBookmarked = cards.filter((card) => !card.isBookmarked);
 
 const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter(
   (card) =>
-    card.isBookmarked && (card.tags.includes("html") || card.tags.includes("js"))
+    card.isBookmarked
+    && (card.tags.includes("html") || card.tags.includes("js"))
 );
 // all cards with tags that are bookmarked only use card.isBookmarked 
 // if the card hast the tag html or (use -> "||" ) a js tag: put in one () because card.isBookmarked needs to be always true
