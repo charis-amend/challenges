@@ -1,10 +1,12 @@
 import { getRandomColor } from "./utils/randomColor.js"
 import Circle from "./components/Circle/Circle.js"
+import Square from "./components/Square/Square.js"
+import Pentagon from "./components/Pentagon/Pentagon.js"
+
 console.clear();
 
 
 const root = document.getElementById("root");
-
 
 // function Circle() {
 //   const circle = document.createElement("div");
@@ -17,19 +19,26 @@ const root = document.getElementById("root");
 const circleElement = Circle();
 root.append(circleElement)
 
+// function Square() {
+//   const square = document.createElement("div");
+//   square.classList.add("square");
+//   square.addEventListener("click", () => {
+//     square.style.backgroundColor = getRandomColor();
+//   });
+//   return square;
+// }
+const squareElement = Square();
+root.append(squareElement)
 
-const square = document.createElement("div");
-square.classList.add("square");
-square.addEventListener("click", () => {
-  square.style.backgroundColor = "#ccc";
-  getRandomColor
-});
+// function Pentagon() {
+//   const pentagon = document.createElement("div");
+//   pentagon.classList.add("pentagon");
+//   pentagon.addEventListener("click", () => {
+//     pentagon.style.backgroundColor = getRandomColor();
+//   });
+//   return pentagon;
+// }
+const pentagonElement = Pentagon();
+root.append(pentagonElement)
 
-const pentagon = document.createElement("div");
-pentagon.classList.add("pentagon");
-pentagon.addEventListener("click", () => {
-  pentagon.style.backgroundColor = "#ccc";
-  getRandomColor;
-});
-
-root.append(circleElement, square, pentagon);
+root.append(circleElement, squareElement, pentagonElement);
