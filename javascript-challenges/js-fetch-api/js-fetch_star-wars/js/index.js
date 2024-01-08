@@ -41,6 +41,6 @@ fetchDataAndRender();
 
 // --v-- your code below this line --v--
 
-function fetchDataAndRender() {
+async function fetchDataAndRender() {
   fetch(); // ?
 }
