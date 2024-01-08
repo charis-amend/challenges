@@ -14,3 +14,13 @@ Implement the following functionality:
 const firstInput = document.querySelector("[data-js=first-input]");
 const secondInput = document.querySelector("[data-js=second-input]");
 const button = document.querySelector("[data-js=button]");
+
+// 1. task 
+
+button.addEventListener("click", (eventOne) => {
+    eventOne.preventDefault();
+
+    const copiedFirstInput = firstInput.value
+    const copiedSecondInput = secondInput.value
+    console.log(copiedFirstInput, copiedSecondInput)
+})
