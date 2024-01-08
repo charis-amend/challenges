@@ -17,6 +17,15 @@ const firstInput = document.querySelector('[data-js="first-input"]');
 const uppercaseButton = document.querySelector('[data-js="button-uppercase"]');
 const lowercaseButton = document.querySelector('[data-js="button-lowercase"]');
 
+const secondInput = document.createElement("input")
+secondInput.type = "text";
+const form = document.querySelector('[data-js="form"]')
+form.append(secondInput)
+
+const switchButton = document.createElement("button")
+switchButton.textContent = "switch button"
+form.append(switchButton);
+
 uppercaseButton.addEventListener("click", () => {
   firstInput.value = firstInput.value.toUpperCase();
 });
@@ -24,3 +33,13 @@ uppercaseButton.addEventListener("click", () => {
 lowercaseButton.addEventListener("click", () => {
   firstInput.value = firstInput.value.toLowerCase();
 });
+
+switchButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  // variables for the first inserted values in the input fields:
+  const firstValueOfInputFieldOne = firstInput.value;
+  const firstValueOfInputFieldTwo = secondInput.value;
+  // switching the values:
+  secondInput.value = firstValueOfInputFieldOne;
+  firstInput.value = firstValueOfInputFieldTwo;
+})
