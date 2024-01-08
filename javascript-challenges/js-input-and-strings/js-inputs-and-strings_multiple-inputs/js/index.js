@@ -17,10 +17,24 @@ const button = document.querySelector("[data-js=button]");
 
 // 1. task 
 
-button.addEventListener("click", (eventOne) => {
-    eventOne.preventDefault();
+// button.addEventListener("click", () => {
 
-    const copiedFirstInput = firstInput.value
-    const copiedSecondInput = secondInput.value
-    console.log(copiedFirstInput, copiedSecondInput)
+//     const firstValueOfFirstInput = firstInput.value
+//     secondInput.value = firstValueOfFirstInput
+// })
+
+// 2. task 
+// button.addEventListener("click", () => {
+//     const firstValueOfFirstInput = firstInput.value.toUpperCase();
+//     secondInput.value = firstValueOfFirstInput
+// })
+
+// 3. task 
+button.addEventListener("click", () => {
+
+    const firstValueOfFirstInput = firstInput.value
+    const firstValueOfSecondInput = secondInput.value
+
+    firstInput.value = firstValueOfSecondInput
+    secondInput.value = firstValueOfFirstInput
 })
