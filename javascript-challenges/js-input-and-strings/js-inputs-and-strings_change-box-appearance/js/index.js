@@ -3,9 +3,12 @@
 Change the appearance of the box according to the values of the sliders (color, border radius, rotation)
 
 – [ ] Add an event listener for each input element.
-– [ ] When the slider control of inputColor is moved, change the background color of the box. Hint: You need to work with the hsl() functional notation for colors.
-– [ ] When the slider control of inputRadius is moved, change the border radius of the box. If the control reaches the right end, make the box look like a circle.
-– [ ] When the slider control of inputRotation is moved, rotate the box. Hint: You may need to work with the CSS property "transform" and a value that contains "rotate" and "deg".
+– [ ] When the slider control of inputColor is moved, change the background color of the box. 
+Hint: You need to work with the hsl() functional notation for colors.
+– [ ] When the slider control of inputRadius is moved, change the border radius of the box. 
+If the control reaches the right end, make the box look like a circle.
+– [ ] When the slider control of inputRotation is moved, rotate the box. 
+Hint: You may need to work with the CSS property "transform" and a value that contains "rotate" and "deg".
 
 Hint: You can work with the property "style", just like you worked with the property "classList".
 
@@ -16,3 +19,35 @@ For further information check MDN:
 - about CSS declarations with "style": https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
 
 */
+
+const colorButton = document.querySelector('[data-js="input-color"]')
+const radiusButton = document.querySelector('[data-js="input-radius"]')
+const rotateButton = document.querySelector('[data-js="input-rotation"]')
+const theBox = document.querySelector('[data-js="box"]')
+
+// color button:
+/* 
+The hsl() functional notation is a way to define colors in CSS (Cascading Style Sheets). It stands for Hue, Saturation, and Lightness, 
+Hue (H): This represents the type of color, expressed in degrees on the color wheel. It ranges from 0 to 360, where 0 and 360 both represent red, 120 represents green, and 240 represents blue.
+*/
+colorButton.addEventListener("input", () => {
+    let hueValueOfBoxColor = colorButton.value
+
+    console.log(hueValueOfBoxColor)
+
+    theBox.style.backgroundColor = `hsl(${hueValueOfBoxColor}, 50%, 50%)`;
+})
+
+radiusButton.addEventListener("input", () => {
+    let radiusValueOfBox = radiusButton.value;
+
+    console.log(radiusValueOfBox);
+
+    theBox.style.borderRadius = `${radiusValueOfBox}px`
+})
+
+rotateButton.addEventListener("input", () => {
+    let rotateValueOfBox = rotateButton.value;
+    console.log(rotateValueOfBox);
+    theBox.style.transform = `rotate( ${rotateValueOfBox}deg)`
+})
