@@ -2,6 +2,7 @@ import { Wheel } from "./components/Wheel/Wheel.js";
 import { SpinButton } from "./components/SpinButton/SpinButton.js";
 import { Machine } from "./components/Machine/Machine.js";
 import { Result } from "./components/Result/Result.js";
+import { getMaxCount } from "./utils/symbols.js";
 
 console.clear();
 
@@ -22,6 +23,40 @@ root.append(machine, spinButton, result);
 //                                      ↙️
 spinButton.addEventListener("click", async () => {
   spinButton.disabled = true;
+
+  try {
+    const resultWheel1 = await wheel1.spin()
+    const resultWheel2 = await wheel2.spin()
+    const resultWheel3 = await wheel3.spin()
+
+    Promise.all([resultWheel1, resultWheel2, resultWheel3])
+    const allPromises = [resultWheel1, resultWheel2, resultWheel3];
+    console.log(allPromises)
+    const numberOfMatchingSymbols = getMaxCount(allPromises);
+    console.log("number of matching symbols:", numberOfMatchingSymbols)
+
+    if (numberOfMatchingSymbols === 3) {
+      let newPoints = 100;
+      result.setResult(newPoints);
+      console.log("got 100 points")
+    } else if (numberOfMatchingSymbols === 2) {
+      let newPoints = 10;
+      console.log("got 10 points")
+      result.setResult(newPoints)
+    } else {
+      let newPoints = 0;
+      result.setResult(newPoints)
+      console.log("got 0 points")
+
+    }
+
+
+  } catch (error) {
+    result.setMachineChoked();
+    console.error("the function spinButton.addEventListener didnt work", error)
+  }
+
+
   /**
    * Hint 1:
    * The wheel elements have a spin method that returns a promise.
