@@ -132,6 +132,6 @@ test("getFullNamesSortedByAge() returns an array of full names sorted by age", (
     "Jane Doe",
     "Luke Skywalker",
     "Max Mustermann",
-    "Max Musterfrau"
+    "Erika Musterfrau"
   ])
 });

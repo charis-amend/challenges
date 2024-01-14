@@ -3,15 +3,14 @@ export function getFirstNames(people) {
 }
 
 export function getFullNames(people) {
-  return people.map(person => {
+  return people.map(person =>
     `${person.firstName} ${person.lastName}`
-  });
+  )
 }
 
 export function getNameAndAge(people) {
-  return people.map(person => {
-    `"${person.lastName} (${person.age})"`
-  })
+  return people.map((person) => `${person.lastName} (${person.age})`
+  )
 }
 
 export function getPeopleByAge(people, age) {
@@ -32,13 +31,7 @@ export function findPersonById(people, id) {
 }
 
 export function isAnyoneOlderThan(people, age) {
-  people.some((person) => {
-    if (person.age > age) {
-      return true;
-    } else (person.age < age){
-      return false;
-    }
-  })
+  return people.some((person) => person.age > age)
 }
 
 export function getFullNamesSortedByAge(people) {
