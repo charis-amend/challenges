@@ -3,12 +3,16 @@ export function getFirstNames(people) {
 }
 
 export function getFullNames(people) {
-  return people.map((fullname) => {
-    `${fullname.firstName} ${fullname.lastName}`
+  return people.map((person) => {
+    `${person.firstName} ${person.lastName}`
   });
 }
 
-export function getNameAndAge(people) { }
+export function getNameAndAge(people) {
+  return people.map((person) => {
+    `"${person.lastName} ${person.age}"`
+  })
+}
 
 export function getPeopleByAge(people, age) {
   return people.filter((person) => person.age === age)
