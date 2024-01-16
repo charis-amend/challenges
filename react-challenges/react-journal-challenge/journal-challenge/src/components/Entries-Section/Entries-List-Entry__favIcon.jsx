@@ -1,11 +1,11 @@
-import starFilled from "../../resources/star-filled.svg";
-import starEmpty from "../../resources/star.svg"
+import starEmpty from '../../assets/star.svg'
+import starFilled from '../../assets/star-filled.svg'
 
-export default function FavIcon() {
+export default function FavIconOfEntry() {
     return (
         <div className="FavIcon__section">
-            <starEmpty src={starEmpty} alt="starEmpty" />
-            <starFilled src={starFilled} alt="starFilled" />
+            <img src={starEmpty} alt="starEmpty" />
+            <img src={starFilled} alt="starFilled" />
         </div>
     )
 }

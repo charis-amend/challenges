@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 
-export default function Header__title({ children }) {
+export default function Header__title({ titleText }) {
     return (
         <>
-            <h1 className="header__title">{children}</h1>
+            <h1 className="header__title">{titleText}</h1>
         </>
     )
 }
