@@ -32,7 +32,7 @@ import FooterText from './components/Footer__text.jsx'
 function App() {
   console.log("testing the app() function")
   return (
-    <>
+    <div>
       {/* <FigmaDesign /> */}
       {/* --------- */}
       <Header>
@@ -43,7 +43,7 @@ function App() {
         {/* ----- Form to create new entries:---- */}
         <EntryFormSection>
           <form>
-            <FormInput inputField="motto" labelForInput="Motto:" nameOfInputField="input-for-motto" />
+            <FormInput inputField="motto" nameOfInputField="input-for-motto" labelForInput="Motto:" />
             <FormTextarea textareaInput="notes" labelOfTextarea="Notes:" nameOfTextarea="input-for-notes" />
             <FormSubmitButton />
           </form>
@@ -92,7 +92,7 @@ function App() {
         <FooterText />
       </Footer>
 
-    </>
+    </div>
   )
 }
 
