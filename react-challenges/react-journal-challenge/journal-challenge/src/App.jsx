@@ -3,14 +3,21 @@
 // import viteLogo from '/vite.svg'
 import './App.css'
 
-import FigmaDesign from './components/figmadesignimport.jsx'
+import FigmaDesign from './components/FigmaDesign.jsx'
+import Header from './components/Header.jsx'
+import Header__title from './components/Header__title.jsx'
 
 function App() {
 
 
   return (
-    <>
+    <div>
       <FigmaDesign />
+
+      <Header>
+        <Header__title title="My Journal App" />
+
+      </Header>
 
       {/* <h1>Vite + React</h1>
       <div className="card">
@@ -24,7 +31,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p> */}
-    </>
+    </div>
   )
 }
 
