@@ -1,0 +1,6 @@
+.header {
+  display: flex;
+
+  color: var(--color-water-10);
+  background-color: var(--color-granite);
+}

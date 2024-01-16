@@ -1,7 +1,8 @@
-export default function Header__title(title) {
+// eslint-disable-next-line react/prop-types
+export default function Header__title({ children }) {
     return (
         <>
-            <h1 className="header__title">{title}</h1>
+            <h1 className="header__title">{children}</h1>
         </>
     )
 }
