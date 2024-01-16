@@ -1,12 +1,4 @@
-// eslint-disable-next-line react/prop-types
+/* eslint-disable react/prop-types */
 export default function Header({ children }) {
-
-    return (
-        <>
-            <header className="header">
-                {children}
-            </header>
-        </>
-    )
-
+    return <header className="header">{children}</header>;
 }
