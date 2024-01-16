@@ -28,7 +28,7 @@ import FavIconOfEntry from './components/Entries-Section/Entries-List-Entry__fav
 import TextareaOfAnEntryInEntryList from './components/Entries-Section/Entries-List-Entry__Text.jsx'
 
 function App() {
-
+  console.log("testing the app() function")
   return (
     <>
       {/* <FigmaDesign /> */}
@@ -102,5 +102,6 @@ function App() {
     </>
   )
 }
+App();
 
 export default App
