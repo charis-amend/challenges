@@ -1,5 +1,5 @@
 export default function FormSubmitButton() {
-    console.log("testing footer() component inside App() ")
+    console.log("testing formsubmit() component inside App() ")
 
     return (
         <>
