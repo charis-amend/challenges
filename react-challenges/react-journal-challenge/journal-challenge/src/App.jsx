@@ -3,12 +3,13 @@
 // import viteLogo from '/vite.svg'
 import './App.css'
 
-// import FigmaDesign from './components/FigmaDesign.jsx'
+import FigmaDesign from './components/FigmaDesign.jsx'
 import Header from './components/Header.jsx'
 import Header__title from './components/Header__title.jsx'
 import Main from './components/Main.jsx'
 // --- Form-Section
 import EntryFormSection from './components/Form-Section/EntryFormSection.jsx'
+import TitleFormNewEntry from './components/Form-Section/Form__titleNewEntry.jsx'
 import FormInput from './components/Form-Section/Form__input.jsx'
 import FormTextarea from './components/Form-Section/Form__textarea.jsx'
 import FormSubmitButton from './components/Form-Section/Form__submit.jsx'
@@ -32,21 +33,26 @@ import FooterText from './components/Footer__text.jsx'
 function App() {
   console.log("testing the app() function")
   return (
-    <div>
-      {/* <FigmaDesign /> */}
+    <>
+
       {/* --------- */}
       <Header>
-        <Header__title>My Journal App</Header__title>
+        <Header__title />
       </Header>
 
       <Main>
+
+
         {/* ----- Form to create new entries:---- */}
+
         <EntryFormSection>
-          <form>
-            <FormInput inputField="motto" nameOfInputField="input-for-motto" labelForInput="Motto:" />
-            <FormTextarea textareaInput="notes" labelOfTextarea="Notes:" nameOfTextarea="input-for-notes" />
-            <FormSubmitButton />
-          </form>
+
+          <TitleFormNewEntry>New Entry</TitleFormNewEntry>
+
+          <FormInput inputField="motto" nameOfInputField="input-for-motto" labelForInput="Motto:" />
+          <FormTextarea textareaInput="notes" labelOfTextarea="Notes:" nameOfTextarea="input-for-notes" />
+          <FormSubmitButton />
+
         </EntryFormSection>
 
         {/* ---Entries Section// tab bar + entry list------ */}
@@ -92,7 +98,7 @@ function App() {
         <FooterText />
       </Footer>
 
-    </div>
+    </>
   )
 }
 
