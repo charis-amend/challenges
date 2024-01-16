@@ -3,7 +3,7 @@ export default function FormInput({ inputField, labelForInput, nameOfInputField 
 
     return (
         <>
-            <label htmlFor={inputField}>{labelForInput}</label>
+            <label className="form-input" htmlFor={inputField}>{labelForInput}</label>
             <input type="text" id={inputField} name={nameOfInputField} />
         </>
     )
