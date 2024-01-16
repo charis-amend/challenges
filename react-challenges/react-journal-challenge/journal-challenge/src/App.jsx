@@ -26,6 +26,8 @@ import DateOfAnEntry from './components/Entries-Section/Entries-List-Entry__Date
 import TitleOfAnEntryInEntries from './components/Entries-Section/Entries-List-Entry__Title.jsx'
 import FavIconOfEntry from './components/Entries-Section/Entries-List-Entry__favIcon.jsx'
 import TextareaOfAnEntryInEntryList from './components/Entries-Section/Entries-List-Entry__Text.jsx'
+import Footer from './components/Footer.jsx'
+import FooterText from './components/Footer__text.jsx'
 
 function App() {
   console.log("testing the app() function")
@@ -86,22 +88,13 @@ function App() {
 
         </EntriesSection>
       </Main>
+      <Footer>
+        <FooterText />
+      </Footer>
 
-      {/* <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
     </>
   )
 }
-App();
+
 
 export default App
