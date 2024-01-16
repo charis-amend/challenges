@@ -1,12 +1,11 @@
 // eslint-disable-next-line react/prop-types
-export default function Header({ children }) {
+export default function Main({ children }) {
 
     return (
         <>
-            <header className="header">
+            <main className="main">
                 {children}
-            </header>
+            </main>
         </>
     )
-
 }

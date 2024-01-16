@@ -1,4 +1,5 @@
 @import "./colors.css";
+@import "./index.css";
 
 #root {
   max-width: 1280px;
