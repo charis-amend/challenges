@@ -1,7 +1,7 @@
-export default function ({ navigation }) {
+export default function Navigation({ children }) {
     return (
-        <div>
-            <nav>{navigation}</nav>
-        </div>
+        <>
+            <nav>{children}</nav>
+        </>
     )
 }

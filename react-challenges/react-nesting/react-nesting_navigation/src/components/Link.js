@@ -1,17 +1,10 @@
-export default function ({ children }) {
+// eslint-disable-next-line react/display-name
+export default function Links({ href, children }) {
     return (
-        <div>
-
-            <a className="navigation__link" href="#home">
-                Home
+        <>
+            <a className="navigation__link" href={href}>
+                {children}
             </a>
-            <a className="navigation__link" href="#about">
-                About
-            </a>
-            <a className="navigation__link" href="#impressum">
-                Impressum
-            </a>
-
-        </div>
+        </>
     )
 }
