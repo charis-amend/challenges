@@ -3,7 +3,6 @@
 // import viteLogo from '/vite.svg'
 import './App.css'
 
-import FigmaDesign from './components/FigmaDesign.jsx'
 import Header from './components/Header.jsx'
 import Header__title from './components/Header__title.jsx'
 import Main from './components/Main.jsx'
@@ -19,6 +18,7 @@ import TabBarEntries from './components/TabBar/Entries__tabBar.jsx'
 import OneTabInTabBar from './components/TabBar/Entries__aTab.jsx'
 import BadgeOfOneTab from './components/TabBar/Entries-tab__badge.jsx'
 import CountEntriesOfOneTab from './components/TabBar/Entries-tab__countEntries.jsx'
+import TitleOfWhichTabAllOrFav from './components/TabBar/Entries-tab__title.jsx'
 // --- Entries-Section
 import EntriesSection from './components/Entries-Section/EntriesSection.jsx'
 import ListOfEntries from './components/Entries-Section/Entries__listEntries.jsx'
@@ -61,6 +61,7 @@ function App() {
           <TabBarEntries>
             {/* All Entries TAB: */}
             <OneTabInTabBar>
+              <TitleOfWhichTabAllOrFav titleOfTab="All Entries" />
               <BadgeOfOneTab>
                 <CountEntriesOfOneTab numberOfAllOrFavEntries="5" />
               </BadgeOfOneTab>
@@ -68,15 +69,17 @@ function App() {
             {/* ----list of all entries------ */}
             <ListOfEntries>
               <AnEntryInEntriesList>
-                <DateOfAnEntry />
-                <TitleOfAnEntryInEntries />
-                <FavIconOfEntry src="starEmpty" alt="starEmpty" />
+                <DateOfAnEntry timeOfFormSubmission="23.23.2023" />
+                <TitleOfAnEntryInEntries titleOfFormInputFieldMotto="title entry in all entries list" />
+                <FavIconOfEntry isFavorite={false} />
                 <TextareaOfAnEntryInEntryList />
               </AnEntryInEntriesList>
             </ListOfEntries>
 
             {/* Favorites TAB */}
             <OneTabInTabBar>
+              <TitleOfWhichTabAllOrFav titleOfTab="Favorites" />
+
               <BadgeOfOneTab>
                 <CountEntriesOfOneTab numberOfAllOrFavEntries="5" />
               </BadgeOfOneTab>
@@ -85,9 +88,9 @@ function App() {
           {/* ----list of FAVORITE entries------ */}
           <ListOfEntries>
             <AnEntryInEntriesList>
-              <DateOfAnEntry />
-              <TitleOfAnEntryInEntries />
-              <FavIconOfEntry src="starFilled" alt="starFilled" />
+              <DateOfAnEntry timeOfFormSubmission="23.23.2023" />
+              <TitleOfAnEntryInEntries titleOfFormInputFieldMotto="entry title fav list" />
+              <FavIconOfEntry isFavorite={false} />
               <TextareaOfAnEntryInEntryList />
             </AnEntryInEntriesList>
           </ListOfEntries>
