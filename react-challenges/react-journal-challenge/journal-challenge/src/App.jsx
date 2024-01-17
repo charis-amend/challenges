@@ -79,8 +79,8 @@ function App() {
           <ListOfEntries>
             <AnEntryInEntriesList>
               <DateOfAnEntry timeOfFormSubmission="23.23.2023" />
-              <TitleOfAnEntryInEntries titleOfFormInputFieldMotto="title entry in all entries list" />
               <FavIconOfEntry />
+              <TitleOfAnEntryInEntries titleOfFormInputFieldMotto="title entry in all entries list" />
               <TextareaOfAnEntryInEntryList />
             </AnEntryInEntriesList>
           </ListOfEntries>
@@ -88,8 +88,8 @@ function App() {
           <ListOfEntries>
             <AnEntryInEntriesList>
               <DateOfAnEntry timeOfFormSubmission="23.23.2023" />
-              <TitleOfAnEntryInEntries titleOfFormInputFieldMotto="entry title fav list" />
               <FavIconOfEntry />
+              <TitleOfAnEntryInEntries titleOfFormInputFieldMotto="entry title fav list" />
               <TextareaOfAnEntryInEntryList />
             </AnEntryInEntriesList>
           </ListOfEntries>

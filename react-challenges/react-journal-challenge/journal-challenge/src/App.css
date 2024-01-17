@@ -13,8 +13,9 @@
 @import "./components/TabBar/Entries__aTab.module.css";
 @import "./components/TabBar/Entries-tab__badge.module.css";
 
-@import "./components/Entries-Section/Entries__listEntries.modules.css";
 @import "./components/Entries-Section/EntriesSection.modules.css";
+@import "./components/Entries-Section/Entries__listEntries.modules.css";
+@import "./components/Entries-Section//Entries-List__anEntry.module.css";
 
 #root {
   max-width: 1280px;

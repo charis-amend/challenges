@@ -5,7 +5,7 @@ import { useState } from 'react';
 export default function FavIconOfEntry() {
 
     // default for fav icon is not favorised === starEmpty
-    const [favorised, setFavorised] = useState(false)
+    const [favorised, setFavorised] = useState(true)
 
     // const starSrc = isFavorite ? starFilled : starEmpty;
     // const altText = isFavorite ? "Filled Star" : "Empty Star";

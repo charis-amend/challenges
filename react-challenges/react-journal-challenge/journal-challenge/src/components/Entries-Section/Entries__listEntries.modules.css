@@ -1,6 +1,6 @@
 .entries-section__list-of-entries {
   background-color: var(--color-water-10);
-  border: 2px solid #000;
+  /* border: 2px solid #000; */
 
   margin: 19px;
   margin-top: 0px;

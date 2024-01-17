@@ -1,0 +1,27 @@
+.entries-list__an-entry {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  align-items: center;
+  /* justify-content: space-between;
+  align-content: space-between; */
+  box-sizing: border-box;
+
+  border: 2px solid #000;
+  border-radius: 25px;
+  box-shadow: 1px 1px 1px 2px black;
+
+  margin: 20px;
+  padding: 10px;
+
+  width: 80%px;
+  height: auto;
+
+  font-size: 16px;
+
+  display: grid;
+  grid-template-columns: 5fr 1fr; /* two columns of equal width */
+  grid-template-rows: auto auto auto; /* rows adjust to content size */
+  gap: 10px; /* space between grid items */
+}
