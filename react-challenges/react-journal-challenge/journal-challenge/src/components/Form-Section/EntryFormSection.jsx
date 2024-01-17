@@ -1,11 +1,13 @@
 
 
 // eslint-disable-next-line react/prop-types
-export default function EntryFormSection({ Children }) {
+export default function EntryFormSection({ children }) {
+    console.log("testing entrry from section coponent")
 
     return (
-        <>
-            <section className="entryFormSection">{Children}</section>
-        </>
+
+        <section className="entryFormSection">
+            {children}</section>
+
     )
 }

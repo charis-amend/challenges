@@ -1,10 +1,10 @@
 // eslint-disable-next-line react/prop-types
-export default function BadgeOfOneTab({ Children }) {
+export default function BadgeOfOneTab({ children }) {
 
     return (
         <>
             <div className="badge-for-count-of-entries">
-                {Children}
+                {children}
             </div>
 
         </>

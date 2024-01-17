@@ -3,12 +3,12 @@
 // import viteLogo from '/vite.svg'
 import './App.css'
 
-// import FigmaDesign from './components/FigmaDesign.jsx'
 import Header from './components/Header.jsx'
 import Header__title from './components/Header__title.jsx'
 import Main from './components/Main.jsx'
 // --- Form-Section
 import EntryFormSection from './components/Form-Section/EntryFormSection.jsx'
+import TitleFormNewEntry from './components/Form-Section/Form__titleNewEntry.jsx'
 import FormInput from './components/Form-Section/Form__input.jsx'
 import FormTextarea from './components/Form-Section/Form__textarea.jsx'
 import FormSubmitButton from './components/Form-Section/Form__submit.jsx'
@@ -18,6 +18,7 @@ import TabBarEntries from './components/TabBar/Entries__tabBar.jsx'
 import OneTabInTabBar from './components/TabBar/Entries__aTab.jsx'
 import BadgeOfOneTab from './components/TabBar/Entries-tab__badge.jsx'
 import CountEntriesOfOneTab from './components/TabBar/Entries-tab__countEntries.jsx'
+import TitleOfWhichTabAllOrFav from './components/TabBar/Entries-tab__title.jsx'
 // --- Entries-Section
 import EntriesSection from './components/Entries-Section/EntriesSection.jsx'
 import ListOfEntries from './components/Entries-Section/Entries__listEntries.jsx'
@@ -26,25 +27,32 @@ import DateOfAnEntry from './components/Entries-Section/Entries-List-Entry__Date
 import TitleOfAnEntryInEntries from './components/Entries-Section/Entries-List-Entry__Title.jsx'
 import FavIconOfEntry from './components/Entries-Section/Entries-List-Entry__favIcon.jsx'
 import TextareaOfAnEntryInEntryList from './components/Entries-Section/Entries-List-Entry__Text.jsx'
+import Footer from './components/Footer.jsx'
+import FooterText from './components/Footer__text.jsx'
 
 function App() {
   console.log("testing the app() function")
   return (
     <>
-      {/* <FigmaDesign /> */}
+
       {/* --------- */}
       <Header>
-        <Header__title>My Journal App</Header__title>
+        <Header__title />
       </Header>
 
       <Main>
+
+
         {/* ----- Form to create new entries:---- */}
+
         <EntryFormSection>
-          <form>
-            <FormInput inputField="motto" labelForInput="Motto:" nameOfInputField="input-for-motto" />
-            <FormTextarea textareaInput="notes" labelOfTextarea="Notes:" nameOfTextarea="input-for-notes" />
-            <FormSubmitButton />
-          </form>
+
+          <TitleFormNewEntry>New Entry</TitleFormNewEntry>
+
+          <FormInput inputField="motto" nameOfInputField="input-for-motto" labelForInput="Motto:" />
+          <FormTextarea textareaInput="notes" labelOfTextarea="Notes:" nameOfTextarea="input-for-notes" />
+          <FormSubmitButton />
+
         </EntryFormSection>
 
         {/* ---Entries Section// tab bar + entry list------ */}
@@ -53,6 +61,7 @@ function App() {
           <TabBarEntries>
             {/* All Entries TAB: */}
             <OneTabInTabBar>
+              <TitleOfWhichTabAllOrFav titleOfTab="All Entries" />
               <BadgeOfOneTab>
                 <CountEntriesOfOneTab numberOfAllOrFavEntries="5" />
               </BadgeOfOneTab>
@@ -60,15 +69,17 @@ function App() {
             {/* ----list of all entries------ */}
             <ListOfEntries>
               <AnEntryInEntriesList>
-                <DateOfAnEntry />
-                <TitleOfAnEntryInEntries />
-                <FavIconOfEntry src="starEmpty" alt="starEmpty" />
+                <DateOfAnEntry timeOfFormSubmission="23.23.2023" />
+                <TitleOfAnEntryInEntries titleOfFormInputFieldMotto="title entry in all entries list" />
+                <FavIconOfEntry isFavorite={false} />
                 <TextareaOfAnEntryInEntryList />
               </AnEntryInEntriesList>
             </ListOfEntries>
 
             {/* Favorites TAB */}
             <OneTabInTabBar>
+              <TitleOfWhichTabAllOrFav titleOfTab="Favorites" />
+
               <BadgeOfOneTab>
                 <CountEntriesOfOneTab numberOfAllOrFavEntries="5" />
               </BadgeOfOneTab>
@@ -77,31 +88,22 @@ function App() {
           {/* ----list of FAVORITE entries------ */}
           <ListOfEntries>
             <AnEntryInEntriesList>
-              <DateOfAnEntry />
-              <TitleOfAnEntryInEntries />
-              <FavIconOfEntry src="starFilled" alt="starFilled" />
+              <DateOfAnEntry timeOfFormSubmission="23.23.2023" />
+              <TitleOfAnEntryInEntries titleOfFormInputFieldMotto="entry title fav list" />
+              <FavIconOfEntry isFavorite={false} />
               <TextareaOfAnEntryInEntryList />
             </AnEntryInEntriesList>
           </ListOfEntries>
 
         </EntriesSection>
       </Main>
+      <Footer>
+        <FooterText />
+      </Footer>
 
-      {/* <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
     </>
   )
 }
-App();
+
 
 export default App
