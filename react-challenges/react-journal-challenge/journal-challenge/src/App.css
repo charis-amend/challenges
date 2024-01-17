@@ -4,13 +4,24 @@
 @import "./components/Main.module.css";
 @import "./components/Form-Section/EntryFormSection.module.css";
 @import "./components/Form-Section/Form__titleNewEntry.module.css";
+@import "./components/Entries-Section/Entries-List-Entry__favIcon.module.css";
+@import "./components/Form-Section/Form__input.module.css";
+@import "./components/Form-Section/Form__textarea.module.css";
+@import "./components/Form-Section/Form__submit.module.css";
+
+@import "./components/TabBar/Entries__tabBar.module.css";
+@import "./components/TabBar/Entries__aTab.module.css";
+@import "./components/TabBar/Entries-tab__badge.module.css";
+
+@import "./components/Entries-Section/Entries__listEntries.modules.css";
+@import "./components/Entries-Section/EntriesSection.modules.css";
 
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  color: var(--color-granite);
+  /* color: var(--color-granite); */
 }
 
 body {
