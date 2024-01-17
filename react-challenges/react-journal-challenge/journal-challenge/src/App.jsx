@@ -66,31 +66,30 @@ function App() {
                 <CountEntriesOfOneTab numberOfAllOrFavEntries="5" />
               </BadgeOfOneTab>
             </OneTabInTabBar>
-            {/* ----list of all entries------ */}
-            <ListOfEntries>
-              <AnEntryInEntriesList>
-                <DateOfAnEntry timeOfFormSubmission="23.23.2023" />
-                <TitleOfAnEntryInEntries titleOfFormInputFieldMotto="title entry in all entries list" />
-                <FavIconOfEntry isFavorite={false} />
-                <TextareaOfAnEntryInEntryList />
-              </AnEntryInEntriesList>
-            </ListOfEntries>
-
             {/* Favorites TAB */}
             <OneTabInTabBar>
               <TitleOfWhichTabAllOrFav titleOfTab="Favorites" />
-
               <BadgeOfOneTab>
                 <CountEntriesOfOneTab numberOfAllOrFavEntries="5" />
               </BadgeOfOneTab>
             </OneTabInTabBar>
           </TabBarEntries>
+
+          {/* ----list of all entries------ */}
+          <ListOfEntries>
+            <AnEntryInEntriesList>
+              <DateOfAnEntry timeOfFormSubmission="23.23.2023" />
+              <FavIconOfEntry />
+              <TitleOfAnEntryInEntries titleOfFormInputFieldMotto="title entry in all entries list" />
+              <TextareaOfAnEntryInEntryList />
+            </AnEntryInEntriesList>
+          </ListOfEntries>
           {/* ----list of FAVORITE entries------ */}
           <ListOfEntries>
             <AnEntryInEntriesList>
               <DateOfAnEntry timeOfFormSubmission="23.23.2023" />
+              <FavIconOfEntry />
               <TitleOfAnEntryInEntries titleOfFormInputFieldMotto="entry title fav list" />
-              <FavIconOfEntry isFavorite={false} />
               <TextareaOfAnEntryInEntryList />
             </AnEntryInEntriesList>
           </ListOfEntries>

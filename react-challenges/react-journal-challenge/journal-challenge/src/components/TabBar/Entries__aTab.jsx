@@ -2,7 +2,7 @@
 export default function OneTabInTabBar({ children }) {
     return (
         <>
-            <section className="entries-tab__badge">
+            <section className="entries-oneTab">
                 {children}
             </section>
         </>
