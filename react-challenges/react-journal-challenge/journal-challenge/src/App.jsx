@@ -81,7 +81,10 @@ function App() {
               <DateOfAnEntry timeOfFormSubmission="23.23.2023" />
               <FavIconOfEntry />
               <TitleOfAnEntryInEntries titleOfFormInputFieldMotto="title entry in all entries list" />
-              <TextareaOfAnEntryInEntryList />
+              <TextareaOfAnEntryInEntryList>
+                tststesasrtflasöadfjkad
+                aölskdfjasöldkfjalsödkfj
+              </TextareaOfAnEntryInEntryList>
             </AnEntryInEntriesList>
           </ListOfEntries>
           {/* ----list of FAVORITE entries------ */}

@@ -1,9 +1,11 @@
 // eslint-disable-next-line react/prop-types
-export default function TextareaOfAnEntryInEntryList({ textareaFormInputFieldNotes }) {
+export default function TextareaOfAnEntryInEntryList() {
 
     return (
         <>
-            <textarea className="entries-list-entry__text">{textareaFormInputFieldNotes}</textarea>
+            <p className="entries-list-entry__text">öalsdkfjaösldkfjasöldfkj
+                öalskdfjaölsdkfjasöldfkj,jkjhhgkjhgnvfbcvxbnm,.nbvcx
+                aölskdfjasöldkfjasöldfkj</p>
         </>
     )
 }
