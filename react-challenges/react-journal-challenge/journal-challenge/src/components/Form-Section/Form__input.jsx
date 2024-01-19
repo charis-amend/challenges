@@ -2,8 +2,8 @@
 export default function FormInput({ inputField, labelForInput, nameOfInputField }) {
     return (
         <>
-            <label htmlFor={nameOfInputField}>{labelForInput}</label>
-            <input type="text" id={nameOfInputField} name={inputField} className="input-field" />
+            <label className="form-input-label" htmlFor={nameOfInputField}>{labelForInput}</label>
+            <input className="form-input-field" type="text" id={nameOfInputField} name={inputField} className="input-field" />
         </>
     );
 }

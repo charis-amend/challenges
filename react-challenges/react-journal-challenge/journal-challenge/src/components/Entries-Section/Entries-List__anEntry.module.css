@@ -1,0 +1,139 @@
+/* .entries-list__an-entry {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: space-between;
+  align-content: space-between;
+  box-sizing: border-box;
+
+  border: 2px solid #000;
+  border-radius: 25px;
+  box-shadow: 1px 1px 1px 2px black;
+
+  margin: 20px;
+  padding: 20px;
+
+  width: 90%;
+  height: auto;
+
+  display: grid;
+  gap: 2px;
+  grid-template-areas:
+    "date  star"
+    "title  title"
+    "text  text";
+}
+
+.entry-list-entry__date {
+  width: auto;
+  text-align: left;
+  color: var(--color-granite);
+  box-sizing: border-box;
+  margin: 2px;
+  border: 1px;
+  padding: 2px;
+
+  grid-area: date;
+}
+
+.FavIcon__section {
+  display: flex;
+  align-items: end;
+  justify-content: right;
+  background-color: var(--color-water-10);
+  box-sizing: border-box;
+  grid-area: star;
+  width: 20px;
+}
+
+button {
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-water-10);
+  border-style: none;
+}
+
+.entry-list-entry__title,
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-granite);
+  width: auto;
+  grid-area: title;
+}
+
+.entries-list-entry__text {
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-water-10);
+  color: var(--color-granite);
+  box-sizing: border-box;
+  margin: 5px;
+  border: 1px;
+  padding: 2px;
+  width: 80%;
+
+  grid-area: text;
+} */
+
+.entries-list__an-entry {
+  min-width: 500px;
+  width: 90vw;
+
+  overflow-x: auto;
+
+  border: 2px solid #000;
+  border-radius: 25px;
+  box-shadow: 1px 1px 1px 2px black;
+  display: grid;
+  gap: 2px;
+  grid-template-areas:
+    "date star"
+    "title title"
+    "text text";
+  padding: 20px; /* Padding added to ensure children don't touch the border */
+  margin: 20px;
+  box-sizing: border-box; /* Ensures padding and border are included in the width/height */
+}
+
+.entry-list-entry__date {
+  text-align: left;
+  color: var(--color-granite);
+  grid-area: date;
+  align-self: start; /* Aligns the content to the top */
+  margin-top: 0px;
+}
+
+.FavIcon__section {
+  background-color: var(--color-water-10);
+  box-sizing: border-box;
+  grid-area: star;
+  justify-self: end; /* Aligns the section to the right */
+  align-self: start; /* Aligns the section to the top */
+}
+
+button {
+  background-color: transparent;
+  border-style: none;
+  cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+.entry-list-entry__title,
+h2 {
+  justify-content: center;
+  align-items: center;
+  color: var(--color-granite);
+  grid-area: title;
+  text-align: center; /* Centers the text horizontally */
+}
+
+.entries-list-entry__text {
+  background-color: var(--color-water-10);
+  color: var(--color-granite);
+  grid-area: text;
+  text-align: justify; /* Adjusts the text to be block-aligned */
+  padding: 10px; /* Optional padding for better readability */
+}

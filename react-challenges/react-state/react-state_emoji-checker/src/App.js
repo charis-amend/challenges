@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
 export default function App() {
-  let code = "?";
 
+  const [code, setCode] = useState("");
+
+  // let code = "?"
   const validCode = "🐡🐠🐋";
+  function handleClick(emoji) {
+    setCode((code) => {
+      return code + emoji
+    }
+
+    )
+  }
+  // reseting code back to the original state --> useState("")
+  function handleReset() {
+    setCode("")
+  }
 
   return (
     <div className="container">
@@ -12,7 +25,8 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            console.log("Update Code!");
+            handleClick("🐡")
+            console.log("Updated Pufferfish Emoji!");
           }}
         >
           <span role="img" aria-label="Pufferfish">
@@ -22,7 +36,8 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            console.log("Update Code!");
+            handleClick("🐋")
+            console.log("Updated WhaleEmoji!");
           }}
         >
           <span role="img" aria-label="Whale">
@@ -32,7 +47,8 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            console.log("Update Code!");
+            handleClick("🐠")
+            console.log("Updated Clownfish Emoji!");
           }}
         >
           <span role="img" aria-label="Clownfish">
@@ -44,14 +60,15 @@ export default function App() {
       <button
         type="button"
         onClick={() => {
-          console.log("Reset Code!");
+          handleReset("reset the emojis")
+          console.log("Reseted Code!");
         }}
       >
         Reset
       </button>
       <h2>{code}</h2>
 
-      {code === validCode && <p>Valid code!</p>}
-    </div>
+      {code === validCode && <p>Valid Cod!</p>}
+    </div >
   );
 }

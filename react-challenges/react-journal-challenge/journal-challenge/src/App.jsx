@@ -23,10 +23,10 @@ import TitleOfWhichTabAllOrFav from './components/TabBar/Entries-tab__title.jsx'
 import EntriesSection from './components/Entries-Section/EntriesSection.jsx'
 import ListOfEntries from './components/Entries-Section/Entries__listEntries.jsx'
 import AnEntryInEntriesList from './components/Entries-Section/Entries-list__anEntry.jsx'
-import DateOfAnEntry from './components/Entries-Section/Entries-List-Entry__Date.jsx'
-import TitleOfAnEntryInEntries from './components/Entries-Section/Entries-List-Entry__Title.jsx'
-import FavIconOfEntry from './components/Entries-Section/Entries-List-Entry__favIcon.jsx'
-import TextareaOfAnEntryInEntryList from './components/Entries-Section/Entries-List-Entry__Text.jsx'
+// import DateOfAnEntry from './components/Entries-Section/Entries-List-Entry__Date.jsx'
+// import TitleOfAnEntryInEntries from './components/Entries-Section/Entries-List-Entry__Title.jsx'
+// import FavIconOfEntry from './components/Entries-Section/Entries-List-Entry__favIcon.jsx'
+// import TextareaOfAnEntryInEntryList from './components/Entries-Section/Entries-List-Entry__Text.jsx'
 import Footer from './components/Footer.jsx'
 import FooterText from './components/Footer__text.jsx'
 
@@ -66,32 +66,34 @@ function App() {
                 <CountEntriesOfOneTab numberOfAllOrFavEntries="5" />
               </BadgeOfOneTab>
             </OneTabInTabBar>
-            {/* ----list of all entries------ */}
-            <ListOfEntries>
-              <AnEntryInEntriesList>
-                <DateOfAnEntry timeOfFormSubmission="23.23.2023" />
-                <TitleOfAnEntryInEntries titleOfFormInputFieldMotto="title entry in all entries list" />
-                <FavIconOfEntry isFavorite={false} />
-                <TextareaOfAnEntryInEntryList />
-              </AnEntryInEntriesList>
-            </ListOfEntries>
-
             {/* Favorites TAB */}
             <OneTabInTabBar>
               <TitleOfWhichTabAllOrFav titleOfTab="Favorites" />
-
               <BadgeOfOneTab>
                 <CountEntriesOfOneTab numberOfAllOrFavEntries="5" />
               </BadgeOfOneTab>
             </OneTabInTabBar>
           </TabBarEntries>
+
+          {/* ----list of all entries------ */}
+          <ListOfEntries>
+            <AnEntryInEntriesList>
+              {/* <DateOfAnEntry timeOfFormSubmission="23.23.2023" />
+              <FavIconOfEntry />
+              <TitleOfAnEntryInEntries titleOfFormInputFieldMotto="title entry in all entries list" />
+              <TextareaOfAnEntryInEntryList>
+                tststesasrtflasöadfjkad
+                aölskdfjasöldkfjalsödkfj
+              </TextareaOfAnEntryInEntryList> */}
+            </AnEntryInEntriesList>
+          </ListOfEntries>
           {/* ----list of FAVORITE entries------ */}
           <ListOfEntries>
             <AnEntryInEntriesList>
-              <DateOfAnEntry timeOfFormSubmission="23.23.2023" />
+              {/* <DateOfAnEntry timeOfFormSubmission="23.23.2023" />
+              <FavIconOfEntry />
               <TitleOfAnEntryInEntries titleOfFormInputFieldMotto="entry title fav list" />
-              <FavIconOfEntry isFavorite={false} />
-              <TextareaOfAnEntryInEntryList />
+              <TextareaOfAnEntryInEntryList /> */}
             </AnEntryInEntriesList>
           </ListOfEntries>
 

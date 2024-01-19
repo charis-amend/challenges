@@ -4,7 +4,7 @@ export default function CountEntriesOfOneTab({ numberOfAllOrFavEntries }) {
 
     return (
         <>
-            <p className="number-showing-count-of-entries">{numberOfAllOrFavEntries}</p>
+            <p id="count-font-color" className="number-showing-count-of-entries">{numberOfAllOrFavEntries}</p>
         </>
     )
 }
