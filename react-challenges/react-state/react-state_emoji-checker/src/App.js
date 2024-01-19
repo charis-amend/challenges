@@ -3,12 +3,20 @@ import "./styles.css";
 
 export default function App() {
 
-  const [emoji, setEmoji] = useState("");
+  const [code, setCode] = useState("");
 
   // let code = "?"
-  const validEmoji = "🐡🐠🐋";
-  function handleClick(newEmoji) {
-    setEmoji(newEmoji)
+  const validCode = "🐡🐠🐋";
+  function handleClick(emoji) {
+    setCode((code) => {
+      return code + emoji
+    }
+
+    )
+  }
+  // reseting code back to the original state --> useState("")
+  function handleReset() {
+    setCode("")
   }
 
   return (
@@ -52,15 +60,15 @@ export default function App() {
       <button
         type="button"
         onClick={() => {
-          handleClick("reset the emojis")
-          console.log("Reset Emoji!");
+          handleReset("reset the emojis")
+          console.log("Reseted Code!");
         }}
       >
         Reset
       </button>
-      <h2>{emoji}</h2>
+      <h2>{code}</h2>
 
-      {emoji === validEmoji && <p>Valid Emoji!</p>}
+      {code === validCode && <p>Valid Cod!</p>}
     </div >
   );
 }
