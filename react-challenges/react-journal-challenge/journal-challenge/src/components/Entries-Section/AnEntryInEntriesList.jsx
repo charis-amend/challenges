@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import FavIconOfEntry from "./Entries-List-Entry__favIcon.jsx"
+import FavIconOfEntry from "./FavIconOfEntry.jsx"
 // eslint-disable-next-line react/prop-types
 export default function AnEntryInEntriesList({ entry }) {
     return (

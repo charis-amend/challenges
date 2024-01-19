@@ -1,6 +1,6 @@
 
 
-import AnEntryInEntriesList from '../Entries-Section/Entries-list__anEntry.jsx';
+import AnEntryInEntriesList from './AnEntryInEntriesList.jsx';
 import { dataEntries } from '../DataEntries.js';
 
 // eslint-disable-next-line react/prop-types

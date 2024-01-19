@@ -8,10 +8,6 @@ import Header__title from './components/Header__title.jsx'
 import Main from './components/Main.jsx'
 // --- Form-Section
 import EntryFormSection from './components/Form-Section/EntryFormSection.jsx'
-import TitleFormNewEntry from './components/Form-Section/Form__titleNewEntry.jsx'
-import FormInput from './components/Form-Section/Form__input.jsx'
-import FormTextarea from './components/Form-Section/Form__textarea.jsx'
-import FormSubmitButton from './components/Form-Section/Form__submit.jsx'
 
 // ---  TabBar
 import TabBarEntries from './components/TabBar/Entries__tabBar.jsx'
@@ -21,12 +17,9 @@ import CountEntriesOfOneTab from './components/TabBar/Entries-tab__countEntries.
 import TitleOfWhichTabAllOrFav from './components/TabBar/Entries-tab__title.jsx'
 // --- Entries-Section
 import EntriesSection from './components/Entries-Section/EntriesSection.jsx'
-import ListOfEntries from './components/Entries-Section/Entries__listEntries.jsx'
-import AnEntryInEntriesList from './components/Entries-Section/Entries-list__anEntry.jsx'
-// import DateOfAnEntry from './components/Entries-Section/Entries-List-Entry__Date.jsx'
-// import TitleOfAnEntryInEntries from './components/Entries-Section/Entries-List-Entry__Title.jsx'
-// import FavIconOfEntry from './components/Entries-Section/Entries-List-Entry__favIcon.jsx'
-// import TextareaOfAnEntryInEntryList from './components/Entries-Section/Entries-List-Entry__Text.jsx'
+import ListOfEntries from './components/Entries-Section/ListOfEntries.jsx'
+import AnEntryInEntriesList from './components/Entries-Section/AnEntryInEntriesList.jsx'
+
 import Footer from './components/Footer.jsx'
 import FooterText from './components/Footer__text.jsx'
 
@@ -34,25 +27,14 @@ function App() {
   console.log("testing the app() function")
   return (
     <>
-
       {/* --------- */}
       <Header>
         <Header__title />
       </Header>
 
       <Main>
-
-
         {/* ----- Form to create new entries:---- */}
-
         <EntryFormSection>
-
-          <TitleFormNewEntry>New Entry</TitleFormNewEntry>
-
-          <FormInput inputField="motto" nameOfInputField="input-for-motto" labelForInput="Motto:" />
-          <FormTextarea textareaInput="notes" labelOfTextarea="Notes:" nameOfTextarea="input-for-notes" />
-          <FormSubmitButton />
-
         </EntryFormSection>
 
         {/* ---Entries Section// tab bar + entry list------ */}
@@ -78,22 +60,13 @@ function App() {
           {/* ----list of all entries------ */}
           <ListOfEntries>
             <AnEntryInEntriesList>
-              {/* <DateOfAnEntry timeOfFormSubmission="23.23.2023" />
-              <FavIconOfEntry />
-              <TitleOfAnEntryInEntries titleOfFormInputFieldMotto="title entry in all entries list" />
-              <TextareaOfAnEntryInEntryList>
-                tststesasrtflasöadfjkad
-                aölskdfjasöldkfjalsödkfj
-              </TextareaOfAnEntryInEntryList> */}
+
             </AnEntryInEntriesList>
           </ListOfEntries>
           {/* ----list of FAVORITE entries------ */}
           <ListOfEntries>
             <AnEntryInEntriesList>
-              {/* <DateOfAnEntry timeOfFormSubmission="23.23.2023" />
-              <FavIconOfEntry />
-              <TitleOfAnEntryInEntries titleOfFormInputFieldMotto="entry title fav list" />
-              <TextareaOfAnEntryInEntryList /> */}
+
             </AnEntryInEntriesList>
           </ListOfEntries>
 
