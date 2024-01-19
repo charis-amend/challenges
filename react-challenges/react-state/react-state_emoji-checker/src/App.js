@@ -8,8 +8,8 @@ export default function App() {
   // let code = "?"
   const validCode = "🐡🐠🐋";
   function handleClick(emoji) {
-    setCode((previousCode) => {
-      return previousCode + emoji
+    setCode((code) => {
+      return code + emoji
     }
 
     )
