@@ -1,8 +1,9 @@
 import { useState } from 'react'
+import { uid } from 'uid'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
-import { journalEntries } from './components/data_JournalEntries.js'
+import { dataJournalEntries } from './components/data_JournalEntries.js'
 
 import Header from './components/Header.jsx'
 import Header__title from './components/Header__title.jsx'
@@ -28,12 +29,11 @@ import FooterText from './components/Footer__text.jsx'
 function App() {
   console.log("testing the app() function")
   // changing state of journal entries:
-  const [journalEntry, setJournalEntry] = useState(journalEntries);
+  const [journalEntries, setJournalEntries] = useState(dataJournalEntries);
   // function AddJournalEntry from FormSection, push down to EntriesSection
-  function AddJournalEntry() {
-
+  function AddJournalEntry(newjournalentry) {
+    setJournalEntries([{ newjournalentry, id: uid() }, ...journalEntries])
   }
-
 
   return (
     <>
@@ -44,9 +44,7 @@ function App() {
 
       <Main>
         {/* ----- Form to create new entries:---- */}
-        <EntryFormSection>
-        </EntryFormSection>
-
+        <EntryFormSection onAddJournalEntry={AddJournalEntry} />
         {/* ---Entries Section// tab bar + entry list------ */}
         <EntriesSection>
           {/* -- the tab bar -- */}
@@ -68,16 +66,7 @@ function App() {
           </TabBarEntries>
 
           {/* ----list of all entries------ */}
-          <ListOfEntries>
-            <AnEntryInEntriesList>
-
-            </AnEntryInEntriesList>
-          </ListOfEntries>
-          {/* ----list of FAVORITE entries------ */}
-          <ListOfEntries>
-            <AnEntryInEntriesList>
-
-            </AnEntryInEntriesList>
+          <ListOfEntries journalEntries={journalEntries}>
           </ListOfEntries>
 
         </EntriesSection>

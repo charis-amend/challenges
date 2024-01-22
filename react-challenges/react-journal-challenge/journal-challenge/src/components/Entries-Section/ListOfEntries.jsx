@@ -1,24 +1,29 @@
-
-
 import AnEntryInEntriesList from './AnEntryInEntriesList.jsx';
-import { dataEntries } from '../data_JournalEntries.js';
+import { dataJournalEntries } from '../data_JournalEntries.js';
+
 
 // eslint-disable-next-line react/prop-types
-export default function ListOfEntries() {
-    console.log("logging dataEntries var", dataEntries)
+export default function ListOfEntries({ journalEntries }) {
+    console.log("logging dataEntries var", dataJournalEntries)
     return (
         <>
             <section className="entries-section__list-of-entries">
-                {dataEntries &&
-                    dataEntries.map((entry) => {
-                        return (
-                            <AnEntryInEntriesList entry={entry} key={entry.id} />
-                        )
-                    })
-                }
+                <ul>
+                    {journalEntries &&
+                        // eslint-disable-next-line react/prop-types
+                        journalEntries.map((entry) => (
+                            <li key={entry.id} >
+                                <AnEntryInEntriesList
+                                    id={entry.id}
+                                    date={entry.date}
+                                    motto={entry.motto}
+                                    notes={entry.notes}
+                                />
+                            </li>
+                        ))}
+                </ul>
             </section>
         </>
-
     )
 }
 

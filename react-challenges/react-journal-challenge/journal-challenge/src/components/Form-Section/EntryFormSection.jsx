@@ -1,14 +1,17 @@
 // eslint-disable-next-line react/prop-types
-export default function EntryFormSection() {
+export default function EntryFormSection({ onAddJournalEntry }) {
     function SubmittingForm(submission) {
         submission.preventDefault();
-        const formData = new formData(submission.target)
+        const formData = new FormData(submission.target)
         const dataFormEntry = Object.fromEntries(formData)
-        console.log(dataFormEntry);
+        const dayOfSubmission = new Date();
+        const formattedDayOfSubmission = dayOfSubmission.toLocaleDateString();
+        dataFormEntry.dayOfSubmission = formattedDayOfSubmission;
+        console.log("dataFormEntry is:", dataFormEntry);
 
-        function addJournalEntry(newjournalentry);
+        onAddJournalEntry(dataFormEntry);
         submission.target.reset();
-
+        alert("Your Journal Entry was created. See down below.")
     }
     return (
         <section className="entryFormSection">
