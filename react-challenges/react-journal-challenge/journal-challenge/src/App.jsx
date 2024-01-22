@@ -1,7 +1,8 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
+import { journalEntries } from './components/data_JournalEntries.js'
 
 import Header from './components/Header.jsx'
 import Header__title from './components/Header__title.jsx'
@@ -23,8 +24,17 @@ import AnEntryInEntriesList from './components/Entries-Section/AnEntryInEntriesL
 import Footer from './components/Footer.jsx'
 import FooterText from './components/Footer__text.jsx'
 
+
 function App() {
   console.log("testing the app() function")
+  // changing state of journal entries:
+  const [journalEntry, setJournalEntry] = useState(journalEntries);
+  // function AddJournalEntry from FormSection, push down to EntriesSection
+  function AddJournalEntry() {
+
+  }
+
+
   return (
     <>
       {/* --------- */}

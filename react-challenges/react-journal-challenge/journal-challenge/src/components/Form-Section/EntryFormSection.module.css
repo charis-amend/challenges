@@ -19,7 +19,7 @@
 }
 
 .form-label-motto {
-  width: auto;
+  width: 89%;
   text-align: left;
   color: var(--color-granite);
   box-sizing: border-box;
@@ -30,7 +30,7 @@
 }
 
 .form-input-motto {
-  width: auto;
+  width: 89%;
   align-self: center;
   color: var(--color-water-10);
 
@@ -41,7 +41,7 @@
 }
 
 .form-input-motto:hover {
-  width: 60vw;
+  width: 89%;
   align-self: center;
   color: var(--color-water-10);
 
@@ -54,7 +54,7 @@
 }
 
 .form-label-notes {
-  width: 60vw;
+  width: 89%;
   text-align: left;
   color: var(--color-granite);
 
@@ -65,7 +65,7 @@
 }
 
 .form-textarea-notes {
-  width: 60vw;
+  width: 89%;
   align-self: center;
   color: var(--color-water-10);
 
@@ -76,7 +76,7 @@
 }
 
 .form-textarea-notes:hover {
-  width: 60vw;
+  width: 89%;
   align-self: center;
   color: var(--color-water-10);
 
@@ -100,11 +100,11 @@
   margin: 5px;
   margin-top: 8px;
   margin-bottom: 8px;
-  transition-duration: 0.3s;
+  transition-duration: 0.5s;
   cursor: default;
   border-radius: 10px;
 
-  width: 100px;
+  width: 150px;
   height: 40px;
 }
 
@@ -112,18 +112,18 @@
   background-color: var(--color-nemo-dark);
   color: white;
 
-  padding: 10px 20px;
+  padding: 10px;
   text-align: center;
   text-justify: center;
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   margin: 5px;
-  margin-top: 8px;
+  margin-top: 10px;
   margin-bottom: 8px;
 
-  cursor: default;
+  cursor: pointer;
   border-radius: 10px;
-  width: 100px;
-  height: 40px;
+  width: 152px;
+  height: 38px;
 }

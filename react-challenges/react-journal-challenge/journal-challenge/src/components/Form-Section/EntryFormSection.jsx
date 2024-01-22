@@ -1,21 +1,18 @@
-
-
 // eslint-disable-next-line react/prop-types
 export default function EntryFormSection() {
-    // function SubmittingForm(submission) {
-    //     submission.preventDefault();
-    //     const formData = new formData(submission.target)
-    //     const dataFormEntry = Object.fromEntries(formData)
-    //     console.log(dataFormEntry);
+    function SubmittingForm(submission) {
+        submission.preventDefault();
+        const formData = new formData(submission.target)
+        const dataFormEntry = Object.fromEntries(formData)
+        console.log(dataFormEntry);
 
-    //     // function addJournalEntry(newjournalentry);
-    //     submission.target.reset();
-    //     submission.target.elements.inputField.focus();
-    // }
+        function addJournalEntry(newjournalentry);
+        submission.target.reset();
+
+    }
     return (
         <section className="entryFormSection">
-            <form>
-                {/* <form onSubmit={handleSubmit}> */}
+            <form onSubmit={SubmittingForm}>
                 <h2 className="title-form-new-entry">New Entry</h2>
 
                 <label

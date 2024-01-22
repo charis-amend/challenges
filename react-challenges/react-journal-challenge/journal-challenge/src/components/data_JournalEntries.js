@@ -1,4 +1,4 @@
-export const dataEntries = [
+export const journalEntries = [
     {
         id: 1000,
         date: "Feb 5, 2025",

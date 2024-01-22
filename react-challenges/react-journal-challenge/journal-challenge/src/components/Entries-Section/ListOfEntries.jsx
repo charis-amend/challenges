@@ -1,7 +1,7 @@
 
 
 import AnEntryInEntriesList from './AnEntryInEntriesList.jsx';
-import { dataEntries } from '../DataEntries.js';
+import { dataEntries } from '../data_JournalEntries.js';
 
 // eslint-disable-next-line react/prop-types
 export default function ListOfEntries() {
