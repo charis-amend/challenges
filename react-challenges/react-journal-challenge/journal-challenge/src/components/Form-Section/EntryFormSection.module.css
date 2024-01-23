@@ -1,11 +1,129 @@
 .entryFormSection {
   background-color: var(--color-water-10);
   border: 2px solid #000;
+
+  box-sizing: border-box;
   border-radius: 25px;
   margin: 20px;
-  width: 90vw;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.title-form-new-entry {
+  justify-content: center;
+  align-items: center;
+  color: var(--color-granite);
+}
+
+.form-label-motto {
+  width: 89%;
+  text-align: left;
+  color: var(--color-granite);
+  box-sizing: border-box;
+  margin: 2px;
+  border: 1px;
+  padding: 2px;
+  align-self: center;
+}
+
+.form-input-motto {
+  width: 89%;
+  align-self: center;
+  color: var(--color-water-10);
+
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 5px;
+  font-style: italic;
+}
+
+.form-input-motto:hover {
+  width: 89%;
+  align-self: center;
+  color: var(--color-water-10);
+
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 5px;
+  font-style: italic;
+
+  box-shadow: 1px 1px 5px 2px var(--color-nemo);
+}
+
+.form-label-notes {
+  width: 89%;
+  text-align: left;
+  color: var(--color-granite);
+
+  box-sizing: border-box;
+  margin: 2px;
+  border: 1px;
+  padding: 2px;
+}
+
+.form-textarea-notes {
+  width: 89%;
+  align-self: center;
+  color: var(--color-water-10);
+
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 5px;
+  font-style: italic;
+}
+
+.form-textarea-notes:hover {
+  width: 89%;
+  align-self: center;
+  color: var(--color-water-10);
+
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 5px;
+  font-style: italic;
+
+  box-shadow: 1px 1px 5px 2px var(--color-nemo);
+}
+
+.form__submitButton {
+  background-color: var(--color-nemo-mid);
+  color: white;
+
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+  font-style: normal;
+  margin: 5px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  transition-duration: 0.5s;
+  cursor: default;
+  border-radius: 10px;
+
+  width: 150px;
+  height: 40px;
+}
+
+.form__submitButton:hover {
+  background-color: var(--color-nemo-dark);
+  color: white;
+
+  padding: 10px;
+  text-align: center;
+  text-justify: center;
+  display: inline-block;
+  font-size: 14px;
+  font-style: normal;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+
+  cursor: pointer;
+  border-radius: 10px;
+  width: 152px;
+  height: 38px;
 }
