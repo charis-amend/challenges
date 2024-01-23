@@ -1,4 +1,4 @@
-.entries-section__list-of-entries {
+.list-of-entries {
   background-color: var(--color-water-10);
   /* border: 2px solid #000; */
 
@@ -9,4 +9,58 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.journalEntry-list-item {
+  min-width: 500px;
+  width: 90vw;
+
+  overflow-x: auto;
+
+  border: 2px solid #000;
+  border-radius: 25px;
+  box-shadow: 1px 1px 1px 2px black;
+  display: grid;
+  gap: 2px;
+  grid-template-areas:
+    "date star"
+    "title title"
+    "text text";
+  padding: 20px;
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+.journalEntry-date {
+  text-align: left;
+  color: var(--color-granite);
+  grid-area: date;
+  align-self: start; /* Aligns the content to the top */
+  margin-top: 0px;
+}
+
+.FavIcon-button {
+  background-color: var(--color-water-10);
+  box-sizing: border-box;
+  grid-area: star;
+  justify-self: end; /* Aligns the section to the right */
+  align-self: start; /* Aligns the section to the top */
+  cursor: pointer;
+  border-style: none;
+}
+
+.journalEntry-motto {
+  justify-content: center;
+  align-items: center;
+  color: var(--color-granite);
+  grid-area: title;
+  text-align: center; /* Centers the text horizontally */
+}
+
+.journalEntry-notes {
+  background-color: var(--color-water-10);
+  color: var(--color-granite);
+  grid-area: text;
+  text-align: justify; /* Adjusts the text to be block-aligned */
+  padding: 10px; /* Optional padding for better readability */
 }

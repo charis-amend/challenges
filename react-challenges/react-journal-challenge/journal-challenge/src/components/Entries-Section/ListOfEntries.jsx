@@ -1,37 +1,35 @@
-import AnEntryInEntriesList from './AnEntryInEntriesList.jsx';
+/* eslint-disable react/prop-types */
 import { dataJournalEntries } from '../data_JournalEntries.js';
+import starEmpty from '../../assets/star.svg'
+import starFilled from '../../assets/star-filled.svg'
 
-
-// eslint-disable-next-line react/prop-types
-export default function ListOfEntries({ journalEntries }) {
+export default function ListOfEntries({ journalEntries, onFavori }) {
     console.log("logging dataEntries var", dataJournalEntries)
     return (
         <>
-            <section className="entries-section__list-of-entries">
-                <ul>
-                    {journalEntries &&
-                        // eslint-disable-next-line react/prop-types
-                        journalEntries.map((entry) => (
-                            <li key={entry.id} >
-                                <AnEntryInEntriesList
-                                    id={entry.id}
-                                    date={entry.date}
-                                    motto={entry.motto}
-                                    notes={entry.notes}
-                                />
-                            </li>
-                        ))}
-                </ul>
-            </section>
+            <ul className="list-of-entries">
+                {journalEntries.map((journalEntry) => (
+                    <li key={journalEntry.id} className='journalEntry-list-item'>
+                        <h4 className="journalEntry-date">{journalEntry.date}</h4>
+
+                        <button
+                            className='FavIcon-button'
+                            type='button'
+                            onClick={() => onSwitchFavStatus(!favorised)}>
+
+                            {favorised ? (
+                                < img src={starEmpty} alt="empty-star" />
+                            ) : (
+                                < img src={starFilled} alt="empty-star" />
+                            )}
+                        </button >
+
+                        <h2 className="journalEntry-motto">{journalEntry.title}</h2>
+                        <p className="journalEntry-notes">{journalEntry.notes}</p>
+                    </li>
+                ))
+                }
+            </ul >
         </>
     )
 }
-
-{/* I want here to display my cards. */ }
-{/* If I use the {} in my arrow function I need the return */ }
-// {
-//     movies &&
-//         movies.map((element) => {
-//             return <Card movie={element} key={element.id} />;
-//         })
-// }

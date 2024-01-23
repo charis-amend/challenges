@@ -1,4 +1,4 @@
-.badge-for-count-of-entries {
+/* .number-showing-count-of-entries {
   background-color: var(--color-nemo);
   box-sizing: border-box;
   margin: 5px;
@@ -7,10 +7,5 @@
   width: 40px;
   height: 40px;
   border-radius: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  color: aliceblue;
-  font-size: 18px;
-}
+  color: whitesmoke;
+} */
