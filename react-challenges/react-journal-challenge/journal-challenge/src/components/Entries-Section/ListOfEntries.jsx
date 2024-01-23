@@ -22,7 +22,7 @@ export default function ListOfEntries({ journalEntries, onSwitchFavStatus }) {
                             )}
                         </button >
 
-                        <h2 className="journalEntry-motto">{journalEntry.title}</h2>
+                        <h2 className="journalEntry-motto">{journalEntry.motto}</h2>
                         <p className="journalEntry-notes">{journalEntry.notes}</p>
                     </li>
                 ))
