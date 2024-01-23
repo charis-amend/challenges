@@ -1,29 +1,18 @@
 @import "./colors.css";
 @import "./index.css";
 @import "./components/Header.module.css";
-@import "./components/Main.module.css";
 @import "./components/Form-Section/EntryFormSection.module.css";
 
 @import "./components/TabBar/Entries__tabBar.module.css";
-@import "./components/TabBar/Entries__aTab.module.css";
-@import "./components/TabBar/Entries-tab__badge.module.css";
 
-@import "./components/Entries-Section/AnEntryInEntriesList.module.css";
 @import "./components/Entries-Section/EntriesSection.modules.css";
 @import "./components/Entries-Section/ListOfEntries.modules.css";
 
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 10px;
   text-align: center;
-  /* color: var(--color-granite); */
-}
-
-body {
-  margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
 }
