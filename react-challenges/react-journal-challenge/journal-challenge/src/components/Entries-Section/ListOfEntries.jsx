@@ -1,10 +1,8 @@
 /* eslint-disable react/prop-types */
-import { dataJournalEntries } from '../data_JournalEntries.js';
 import starEmpty from '../../assets/star.svg'
 import starFilled from '../../assets/star-filled.svg'
 
-export default function ListOfEntries({ journalEntries, onFavori }) {
-    console.log("logging dataEntries var", dataJournalEntries)
+export default function ListOfEntries({ journalEntries, onSwitchFavStatus }) {
     return (
         <>
             <ul className="list-of-entries">
@@ -15,12 +13,12 @@ export default function ListOfEntries({ journalEntries, onFavori }) {
                         <button
                             className='FavIcon-button'
                             type='button'
-                            onClick={() => onSwitchFavStatus(!favorised)}>
+                            onClick={() => onSwitchFavStatus?.(journalEntry)}>
 
-                            {favorised ? (
-                                < img src={starEmpty} alt="empty-star" />
+                            {journalEntry.isFavorite ? (
+                                <img src={starFilled} alt="filled-star" />
                             ) : (
-                                < img src={starFilled} alt="empty-star" />
+                                <img src={starEmpty} alt="empty-star" />
                             )}
                         </button >
 

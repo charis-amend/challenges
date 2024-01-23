@@ -7,48 +7,45 @@ export default function EntryFormSection({ onAddJournalEntry }) {
         const dayOfSubmission = new Date();
         const formattedDayOfSubmission = dayOfSubmission.toLocaleDateString();
         dataFormEntry.dayOfSubmission = formattedDayOfSubmission;
+        dataFormEntry.isFavorite = false;
         console.log("dataFormEntry is:", dataFormEntry);
 
         onAddJournalEntry(dataFormEntry);
         submission.target.reset();
-        alert("Your Journal Entry was created. See down below.")
     }
     return (
-        <section className="entryFormSection">
-            <form onSubmit={SubmittingForm}>
-                <h2 className="title-form-new-entry">New Entry</h2>
+        <form className="entryFormSection" onSubmit={SubmittingForm}>
+            <h2 className="title-form-new-entry">New Entry</h2>
 
-                <label
-                    className="form-label-motto"
-                    htmlFor="form-input-motto">
-                    Motto:
-                </label>
-                <input
-                    className="form-input-motto"
-                    type="text"
-                    id="motto"
-                    name="motto"
-                />
-                <label
-                    className="form-label-notes"
-                    htmlFor="form-textarea-notes">
-                    Notes:
-                </label>
-                <textarea
-                    className="form-textarea-notes"
-                    id="notes"
-                    name="notes"
-                    rows="10" cols="20">
-                </textarea>
-                <button
-                    type="submit"
-                    value="Submit"
-                    name="submit-button"
-                    className="form__submitButton">
-                    Add Journal Entry
-                </button>
-            </form>
-        </section >
+            <label
+                className="form-label-motto"
+                htmlFor="motto">
+                Motto:
+            </label>
+            <input
+                className="form-input-motto"
+                type="text"
+                id="motto"
+                name="motto"
+            />
+            <label
+                className="form-label-notes"
+                htmlFor="notes">
+                Notes:
+            </label>
+            <textarea
+                className="form-textarea-notes"
+                id="notes"
+                name="notes"
+                rows="10" cols="20">
+            </textarea>
+            <button
+                type="submit"
+                className="form__submitButton">
+                Add Journal Entry
+            </button>
+        </form>
+
 
     )
 
