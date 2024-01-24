@@ -1,11 +1,12 @@
-.entryFormSection {
+.FormSection {
   background-color: var(--color-water-10);
-  border: 2px solid #000;
+  /* border: 2px solid #000; */
 
   box-sizing: border-box;
   border-radius: 25px;
   margin: 20px;
-  width: 90%;
+  margin-top: 70px;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,6 +17,7 @@
   justify-content: center;
   align-items: center;
   color: var(--color-granite);
+  font-size: 12px;
 }
 
 .form-label-motto {
@@ -27,6 +29,7 @@
   border: 1px;
   padding: 2px;
   align-self: center;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .form-input-motto {
@@ -38,6 +41,7 @@
   margin: 5px;
   padding: 5px;
   font-style: italic;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .form-input-motto:hover {
@@ -51,6 +55,7 @@
   font-style: italic;
 
   box-shadow: 1px 1px 5px 2px var(--color-nemo);
+  font-family: "Times New Roman", Times, serif;
 }
 
 .form-label-notes {
@@ -62,6 +67,7 @@
   margin: 2px;
   border: 1px;
   padding: 2px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .form-textarea-notes {
@@ -73,6 +79,7 @@
   margin: 5px;
   padding: 5px;
   font-style: italic;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .form-textarea-notes:hover {
@@ -86,6 +93,7 @@
   font-style: italic;
 
   box-shadow: 1px 1px 5px 2px var(--color-nemo);
+  font-family: "Times New Roman", Times, serif;
 }
 
 .form__submitButton {
@@ -104,8 +112,8 @@
   cursor: default;
   border-radius: 10px;
 
-  width: 150px;
-  height: 40px;
+  width: fit-content;
+  height: fit-content;
 }
 
 .form__submitButton:hover {
@@ -124,6 +132,6 @@
 
   cursor: pointer;
   border-radius: 10px;
-  width: 152px;
-  height: 38px;
+  width: calc(fit-content + 5px);
+  height: calc(fit-content + 5px);
 }

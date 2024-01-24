@@ -13,7 +13,7 @@ export default function TabBarEntries({ numberAllEntries, numberFavEntries }) {
                 <section className="fav-entries-tab">
                     <h3 className="tab-title">Favorites</h3>
                     <div className="badge-for-count-of-entries">
-                        <p id="count-font-color" className="number-showing-count-of-entries">{numberFavEntries}</p>
+                        <p className="number-showing-count-of-entries">{numberFavEntries}</p>
                     </div>
                 </section>
             </section>

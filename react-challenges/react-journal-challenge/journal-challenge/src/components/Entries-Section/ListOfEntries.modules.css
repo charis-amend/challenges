@@ -1,9 +1,11 @@
 .list-of-entries {
   background-color: var(--color-water-10);
   /* border: 2px solid #000; */
-
+  box-sizing: border-box;
+  border-radius: 0px 0px 25px 25px;
   margin: 20px;
   margin-top: 0px;
+  padding: 5px;
   width: 90vw;
   display: flex;
   flex-direction: column;
@@ -12,8 +14,7 @@
 }
 
 .journalEntry-list-item {
-  min-width: 500px;
-  width: 90vw;
+  width: 80vw;
 
   overflow-x: auto;
 
@@ -22,12 +23,13 @@
   box-shadow: 1px 1px 1px 2px black;
   display: grid;
   gap: 2px;
+  grid-template-rows: 12% 20% 68%;
   grid-template-areas:
-    "date star"
-    "title title"
-    "text text";
+    "date date date date star"
+    "title title title title title"
+    "text text text text text";
   padding: 20px;
-  margin: 20px;
+  margin: 10px;
   box-sizing: border-box;
 }
 
@@ -36,31 +38,38 @@
   color: var(--color-granite);
   grid-area: date;
   align-self: start; /* Aligns the content to the top */
-  margin-top: 0px;
+  margin-block: 0px;
+  font-size: 12px;
 }
 
 .FavIcon-button {
   background-color: var(--color-water-10);
   box-sizing: border-box;
   grid-area: star;
-  justify-self: end; /* Aligns the section to the right */
-  align-self: start; /* Aligns the section to the top */
+  justify-self: end;
+  align-self: start;
   cursor: pointer;
   border-style: none;
 }
 
 .journalEntry-motto {
-  justify-content: center;
+  justify-content: flex-start;
+  height: fit-content;
   align-items: center;
   color: var(--color-granite);
   grid-area: title;
-  text-align: center; /* Centers the text horizontally */
+  text-align: left;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12px;
+  font-weight: 900;
 }
 
 .journalEntry-notes {
-  background-color: var(--color-water-10);
   color: var(--color-granite);
   grid-area: text;
-  text-align: justify; /* Adjusts the text to be block-aligned */
-  padding: 10px; /* Optional padding for better readability */
+  text-align: left;
+  justify-content: flex-start;
+  padding: 10px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 10px;
 }

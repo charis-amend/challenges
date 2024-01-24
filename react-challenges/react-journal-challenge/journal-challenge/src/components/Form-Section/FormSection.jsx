@@ -1,5 +1,5 @@
 // eslint-disable-next-line react/prop-types
-export default function EntryFormSection({ onAddJournalEntry }) {
+export default function FormSection({ onAddJournalEntry }) {
     function SubmittingForm(submission) {
         submission.preventDefault();
         const formData = new FormData(submission.target)
@@ -14,7 +14,7 @@ export default function EntryFormSection({ onAddJournalEntry }) {
         submission.target.reset();
     }
     return (
-        <form className="entryFormSection" onSubmit={SubmittingForm}>
+        <form className="FormSection" onSubmit={SubmittingForm}>
             <h2 className="title-form-new-entry">New Entry</h2>
 
             <label

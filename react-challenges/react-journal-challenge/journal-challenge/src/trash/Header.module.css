@@ -1,0 +1,20 @@
+/* .header {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  width: 600px;
+  height: 60px;
+  position: fixed;
+  z-index: 1000;
+
+  color: var(--color-water-10);
+  background-color: var(--color-granite);
+} */
+
+/* .header__title {
+  font-family: "DMSerif Regular";
+  src: url("./assets/fonts/DMSerifDisplay-Regular.ttf") format("truetype");
+  font-size: 20px;
+  text-align: left;
+  z-index: 5;
+} */

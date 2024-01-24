@@ -1,18 +1,44 @@
 @import "./colors.css";
 @import "./index.css";
-@import "./components/Header.module.css";
-@import "./components/Form-Section/EntryFormSection.module.css";
+@import "./components/Form-Section/FormSection.module.css";
 
-@import "./components/TabBar/Entries__tabBar.module.css";
+@import "./components/TabBar/TabBarEntries.module.css";
 
-@import "./components/Entries-Section/EntriesSection.modules.css";
 @import "./components/Entries-Section/ListOfEntries.modules.css";
 
 #root {
   max-width: 1280px;
+  /* max-width: 600px; */
   margin: 0 auto;
   padding: 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
+}
+
+.header__title {
+  position: fixed;
+  font-size: 40px;
+
+  padding: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 60px;
+  z-index: 2;
+  background-color: #ff5c29;
+  border-radius: 500px;
+}
+
+.entriesSection {
+  background-color: #242424;
+
+  margin: 20px;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
