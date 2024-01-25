@@ -1,11 +1,17 @@
 import Head from "next/head";
 import Link from "next/link";
 import { introduction } from "../../resources/lib/data.js"
-import FellowshipRing from "./FellowshipRing.js";
-import ReturnKing from "./ReturnKing.js";
-import TwoTowers from "./TwoTowers.js";
+import { volumes } from "../../resources/lib/data.js";
+import { useRouter } from "next/router.js";
 
 export default function Volumes() {
+    const router = useRouter()
+
+    function getRandomVolume(volumes) {
+        return volumes[Math.floor(Math.random() * volumes.length)];
+    }
+    let randomVolume = getRandomVolume(volumes)
+
     return (
         <>
             <Head>
@@ -14,32 +20,29 @@ export default function Volumes() {
             <h1>Lord of the Rings</h1>
             <h2>All Volumes</h2>
             <ul>
-                <li>
-                    <Link href="/volumes/FellowshipRing">
-                        The Fellowship of the Ring
-                    </Link>
-                </li>
-            </ul>
+                {volumes.map((volume) => {
+                    return (
+                        <li key={volume.slug}>
+                            <Link href={`/volumes/${volume.slug}`}>
+                                {volume.title}
+                            </Link>
+                        </li>
+                    )
+                })}
 
-            <ul>
-                <li>
-                    <Link href="/volumes/TwoTowers">
-                        The Two Towers
-                    </Link>
-                </li>
-            </ul>
-
-            <ul>
-                <li>
-                    <Link href="/volumes/ReturnKing">
-                        The Return of the King
-                    </Link>
-                </li>
             </ul>
 
             <p>{introduction}</p>
+            <button onClick={() => {
 
-
+                if (confirm("Choose a random volume?")) {
+                    return (
+                        router.push(`/volumes/${randomVolume.slug}`)
+                    )
+                }
+            }}>
+                Random Volume
+            </button >
         </>
     )
 }
