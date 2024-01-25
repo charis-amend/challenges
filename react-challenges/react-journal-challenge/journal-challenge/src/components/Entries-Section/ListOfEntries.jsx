@@ -1,29 +1,18 @@
 /* eslint-disable react/prop-types */
 import starEmpty from '../../assets/star.svg'
 import starFilled from '../../assets/star-filled.svg'
-import { useEffect } from 'react'
+// import { useEffect } from 'react'
 
 
-export default function ListOfEntries({ journalEntries, onSwitchFavStatus, ulRef }) {
+export default function ListOfEntries({ journalEntries, onSwitchFavStatus }) {
     // number all entries and referencing number of <li> list items in <ul></ul>
-    const [numberAllEntries, setNumberAllEntries] = useLocalStorageState(0);
-    const ulRef = useRef(null);
-
-    function SwitchCountAllEntries() {
-        useEffect(() => {
-            if (ulRef.current) {
-                const currentNumberOfListItems = ulRef.current.children.length
-                setNumberAllEntries(currentNumberOfListItems)
-                console.log(currentNumberOfListItems)
-            }
-        }, [])
-
-
-    }
-
+    //const [numberAllEntries, setNumberAllEntries] = useLocalStorageState(0);
+    if (onSelectAllEntriesTab(journalEntries)
+    )
+        onSelectAllEntriesTab(journalEntries)
     return (
         <>
-            <ul className="list-of-entries" ref={ulRef}>
+            <ul className="list-of-entries">
                 {journalEntries.map((journalEntry) => (
                     <li key={journalEntry.id} className='journalEntry-list-item'>
                         <h4 className="journalEntry-date">{journalEntry.dayOfSubmission}</h4>

@@ -13,9 +13,9 @@ function App() {
 
   function AddJournalEntry(newjournalentry) {
     setJournalEntries([...journalEntries, { ...newjournalentry, id: uid() }])
-    SwitchCountAllEntries()
   }
-  console.log(journalEntries)
+  console.log("array with  all the journalEntries-Objects:", journalEntries)
+
   function SwitchFavStatus(entryToFavorise) {
     const updatedEntries = journalEntries.map(journalEntry => {
       if (journalEntry.id === entryToFavorise.id) {
@@ -26,6 +26,23 @@ function App() {
       } return journalEntry;
     });
     setJournalEntries(updatedEntries);
+    console.log("the updated Entries after SwitchFavStatus was run:", updatedEntries)
+  }
+
+  const numberAllEntries = journalEntries.length
+  console.log("running CountAllEntries function:", numberAllEntries)
+  const existingFavEntries = journalEntries.some((entry) => entry.isFavorite === true)
+  console.log("Do Favorite Entries exist??? --->", existingFavEntries)
+
+
+  const favJournalEntries = journalEntries.filter((entry) => entry.isFavorite === true)
+  console.log("favJournalEntries:", favJournalEntries)
+
+  const numberFavEntries = favJournalEntries.length;
+  console.log("number of Favorite Entries:", numberFavEntries)
+
+  function SelectAllEntriesTab() {
+    journalEntries.
   }
 
   return (
@@ -35,7 +52,7 @@ function App() {
       <FormSection onAddJournalEntry={AddJournalEntry} />
 
       <section className='entriesSection'>
-        <TabBarEntries />
+        <TabBarEntries numberAllEntries={numberAllEntries} numberFavEntries={numberFavEntries} />
         <ListOfEntries
           journalEntries={journalEntries}
           onSwitchFavStatus={SwitchFavStatus}
