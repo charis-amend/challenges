@@ -1,9 +1,9 @@
-export default function BoxWithClassName({ isBlack }) {
+export default function BoxWithClassName({ $makeBoxBlackProp }) {
   return (
     <div
-      className={`box-with-classname${
-        isBlack ? " box-with-classname--black" : ""
-      }`}
+      className={`greenbox-with-classname${$makeBoxBlackProp ? " greenbox-with-classname--black" : ""
+        }`}
     ></div>
   );
 }
+
