@@ -12,17 +12,13 @@ export default function QuickActions() {
     <StyledQuickActions>
       <Button
         type="button"
-        onClick={() => {
-          console.log("Turn all lights off");
-        }}
+        onClick={handleToggleAllOff}
       >
         Turn all lights off
       </Button>
       <Button
         type="button"
-        onClick={() => {
-          console.log("Turn all lights on");
-        }}
+        onClick={handleToggleAllOn}
       >
         Turn all lights on
       </Button>

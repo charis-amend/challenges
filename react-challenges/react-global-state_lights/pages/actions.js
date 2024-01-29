@@ -1,7 +1,7 @@
 import Link from "../components/Link";
-import QuickActions from "../components/QuickActions";
+import QuickActions from "../components/QuickActions/QuickActions";
 
-export default function Actions() {
+export default function Actions({ handleToggleAllOff, handleToggleAllOn }) {
   return (
     <>
       <Link href="/">← Back home</Link>
