@@ -31,12 +31,24 @@ export default function App({ Component, pageProps }) {
     setLights(updatedLightsOnArray);
   }
 
-  // function handleToggleAllOff()
+  function handleToggleAllOff() {
+    const turnedOffAllLights = lights.map((light) => {
+      return { ...light, isOn: false }
+    })
+    setLights(turnedOffAllLights)
+  }
 
-  // function handleToggleAllOn()
+  function handleToggleAllOn() {
+    const turnedOnAllLights = lights.map((light) => {
+      return { ...light, isOn: true }
+    })
+    setLights(turnedOnAllLights)
+  }
 
+
+  // updating count on homepage
   const lightsAreOnCount = lights.filter((light) => light.isOn).length;
-
+  console.log("lights are on counted:", lightsAreOnCount)
 
   return (
     <Layout>
@@ -45,6 +57,8 @@ export default function App({ Component, pageProps }) {
         lights={lights}
         handleToggle={handleToggle}
         lightsAreOnCount={lightsAreOnCount}
+        handleToggleAllOff={handleToggleAllOff}
+        handleToggleAllOn={handleToggleAllOn}
       />
     </Layout>
   );

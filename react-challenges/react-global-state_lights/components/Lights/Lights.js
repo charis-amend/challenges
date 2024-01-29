@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Light from "../Light";
+import Light from "../Light/Light";
 
 const StyledLights = styled.ul`
   list-style-type: none;
@@ -11,29 +11,18 @@ const StyledLights = styled.ul`
   justify-content: center;
 `;
 
-export default function Lights({ lights, toggleLight }) {
+export default function Lights({ lights, handleToggle }) {
   return (
     <StyledLights>
       {lights.map((light) => (
         <li key={light.id}>
           <Light
-            name={name}
-            isOn={isOn}
-            onToggle={() => toggleLight(light.id)}
+            name={light.name}
+            isOn={light.isOn}
+            onHandleToggle={() => { handleToggle(light.id) }}
           />
         </li>
       ))}
-
-
-      {/* {animals.map((animal) => (
-          <li key={animal.id}>
-            <Counter
-              animal={animal}
-              onAdd={handleAdd}
-              onSubtract={handleSubtract}
-            />
-          </li>
-        ))} */}
     </StyledLights>
   );
 }

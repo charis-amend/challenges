@@ -18,12 +18,12 @@ export const LightButton = styled.button`
 
   &:hover {
     background-color: ${({ $isOn }) =>
-      $isOn ? "rgb(255 255 255 / 0.55)" : "rgb(175 175 175 / 0.55)"};
+    $isOn ? "rgb(255 255 255 / 0.55)" : "rgb(175 175 175 / 0.55)"};
   }
 
   &:active {
     background-color: ${({ $isOn }) =>
-      $isOn ? "rgb(255 255 255 / 0.6)" : "rgb(175 175 175 / 0.6)"};
+    $isOn ? "rgb(255 255 255 / 0.6)" : "rgb(175 175 175 / 0.6)"};
   }
 `;
 
