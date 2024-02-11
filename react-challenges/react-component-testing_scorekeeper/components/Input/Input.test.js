@@ -2,12 +2,10 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Input from ".";
 
-// mock the onChange callback:
-jest.mock("testing the onChange Callback mocking it first:", () => ({
-    onchange() {
-        return { pathname: jest.fn() }
-    }
-}))
+// 1. To check for attributes like placeholder or name, you can use the matcher toHaveAttribute(attributeName, value).
+// 2. The Input component receives an onChange callback; in order to test it, remember that you have to mock if first.
+// 3. You can check how often a function has been called with toHaveBeenCalledTimes(numberOfExpectedCalls).
+
 
 test("renders a label and an input with the correct attributes", async () => {
     render(<Input
