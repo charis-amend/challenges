@@ -7,39 +7,27 @@ import Input from ".";
 // 3. You can check how often a function has been called with toHaveBeenCalledTimes(numberOfExpectedCalls).
 
 
-test("renders a label and an input with the correct attributes", async () => {
+test("renders label and an input with the correct attributes", () => {
     render(<Input
-        labelText={labelText}
-        id={name}
-        name={name}
-        placeholder={placeholder}
-        type="text"
-        value={value}
-        onChange={onChange}
-        required={required}
+        labelText={"exampleLabelText"}
+        name={"exampleNameText"}
     />)
-
-    const user = userEvent.setup();
-
-    const labelText = screen.getByLabelText("Name")
-    const placeholderInput = screen.toHaveAttribute("placeholder", { placeholder })
-    const nameInput = screen.toHaveAttribute("name", { name })
-    const valueInput = screen.toHaveAttribute("value", { value })
-    const requiredInput = screen.toHaveAttribute("required", { required })
-
-
-    await user.type(input, "some input text")
-
-    const resultOfInput = screen.getByRole("heading", {
-        name: "some input text", level: 2
-    })
-
+    const labelText = screen.getByLabelText("exampleLabelText")
+    const nameInput = screen.getByRole("textbox")
     expect(labelText).toBeInTheDocument();
-    expect(placeholderInput).toBeInTheDocument();
     expect(nameInput).toBeInTheDocument();
-    expect(valueInput).toBeInTheDocument();
-    expect(requiredInput).toBeInTheDocument();
-
 });
 
-test("calls callback on every user input", async () => { });
+
+
+test("The Input component receives an onChange callback when user type in input field", async () => {
+    const handleChange = jest.fn()
+    render(<Input onChange={handleChange} />)
+    const user = userEvent.setup()
+    const nameInput = screen.getByRole("textbox")
+    await user.type(nameInput, "input with 24 characters")
+    expect(handleChange).toHaveBeenCalledTimes(24);
+    // needed to be called 24x because string has 24 characters.
+});
+
+
