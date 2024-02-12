@@ -9,11 +9,21 @@ export default async function handler(request, response) {
 
     try {
       const products = await Product.find()
-      console.log(products)
       return response.status(200).json(products)
     } catch (error) {
       console.error(error)
     }
   }
 
+  if (request.method === "POST") {
+    console.log(request)
+    try {
+      const productData = request.body
+      await Product.create(productData)
+      return response.status(201).json({ status: "New Fish was added." })
+    } catch (error) {
+      console.error(error)
+      return response.status(400).json({ error: error.message })
+    }
+  }
 }
