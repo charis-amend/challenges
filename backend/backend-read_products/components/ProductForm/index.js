@@ -25,8 +25,8 @@ export default function ProductForm() {
                 <label htmlFor="inputfish">Add your fish here:</label>
                 <input name="name" type="text" id="inputfish" />
                 <label htmlFor="inputprice">Set the price:</label>
-                <input name="price" type="text" id="inputprice" />
-                <label htmlFor="inputdescription">Set the price:</label>
+                <input name="price" type="number" id="inputprice" />
+                <label htmlFor="inputdescription">Description:</label>
                 <input name="description" type="text" id="inputdescription" />
                 <StyledButton>Add Fish</StyledButton>
             </StyledForm>

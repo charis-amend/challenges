@@ -5,7 +5,7 @@ export const StyledHeading = styled.h4`
   color: var(--color-nemo);
 `;
 
-export const StyledForm = styled.ul`
+export const StyledForm = styled.form`
   list-style-type: none;
   display: grid;
   gap: 1.5rem;

@@ -3,7 +3,7 @@ import Product from "@/db/models/Product";
 import dbConnect from "@/db/connect";
 
 export default async function handler(request, response) {
-
+  console.log("test--------------------")
   await dbConnect();
   if (request.method === "GET") {
 
@@ -16,7 +16,7 @@ export default async function handler(request, response) {
   }
 
   if (request.method === "POST") {
-    console.log(request)
+    console.log(request.body)
     try {
       const productData = request.body
       await Product.create(productData)
