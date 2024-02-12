@@ -4,9 +4,9 @@ import { StyledHeading, StyledForm, StyledButton } from "./ProductForm.styled"
 export default function ProductForm() {
     const { mutate } = useSWR("/api/products")
 
-    const onProductSubmit = async (event) => {
+    const handleProductSubmit = async (event) => {
         event.preventDefault();
-
+        console.log("-------------------  form submitted")
         const formData = new FormData(event.target)
         const productData = Object.fromEntries(formData)
         console.log("---- productData from Form:", productData)
@@ -21,13 +21,13 @@ export default function ProductForm() {
 
         <>
             <StyledHeading>Do you want to add some fishes?</StyledHeading>
-            <StyledForm onSubmit={onProductSubmit}>
+            <StyledForm onSubmit={handleProductSubmit}>
                 <label htmlFor="inputfish">Add your fish here:</label>
-                <input name="inputfish" type="text" id="inputfish" />
+                <input name="name" type="text" id="inputfish" />
                 <label htmlFor="inputprice">Set the price:</label>
-                <input name="inputprice" type="text" id="inputprice" />
+                <input name="price" type="text" id="inputprice" />
                 <label htmlFor="inputdescription">Set the price:</label>
-                <input name="inputdescription" type="text" id="inputdescription" />
+                <input name="description" type="text" id="inputdescription" />
                 <StyledButton>Add Fish</StyledButton>
             </StyledForm>
         </>
