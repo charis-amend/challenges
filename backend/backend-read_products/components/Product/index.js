@@ -25,7 +25,7 @@ export default function Product() {
         Price: {data.price} {data.currency}
       </p>
 
-      <h6></h6>
+      <h6>review title</h6>
       <p></p>
 
       <StyledLink href="/">Back to all</StyledLink>
