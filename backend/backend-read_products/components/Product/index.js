@@ -24,6 +24,10 @@ export default function Product() {
       <p>
         Price: {data.price} {data.currency}
       </p>
+
+      <h6></h6>
+      <p></p>
+
       <StyledLink href="/">Back to all</StyledLink>
     </ProductCard>
   );
