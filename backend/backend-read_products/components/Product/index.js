@@ -1,21 +1,19 @@
 import useSWR from "swr";
 import { useRouter } from "next/router";
-import { ProductCard } from "./Product.styled";
+import { ProductCard, StyledEditButton, StyledDeleteButton } from "./Product.styled";
 import { StyledLink } from "../Link/Link.styled";
+import { useState } from "react";
+import ProductForm from "../ProductForm";
 
-export default function Product() {
-  const router = useRouter();
-  const { id } = router.query;
-
-  const { data, isLoading } = useSWR(`/api/products/${id}`);
-  if (isLoading) {
-    return <h1>Loading...</h1>;
+export default function Product(
+  {
+    onHandleEdit,
+    setIsEditMode,
+    isEditMode,
+    data
   }
+) {
 
-  if (!data) {
-    return;
-  }
-  const reviews = data.reviews
   return (
     <ProductCard>
       <h2>{data.name}</h2>
@@ -23,7 +21,7 @@ export default function Product() {
       <p>
         Price: {data.price} {data.currency}
       </p>
-      {reviews.map((review) => (
+      {data.reviews.map((review) => (
         <>
           <h3 key={review.id} >
             {review.title}
@@ -33,7 +31,17 @@ export default function Product() {
         </>
       ))}
 
+      {!isEditMode &&
+        <ProductForm onSubmit={onHandleEdit}
+        />
+      }
 
+      <StyledEditButton
+        onClick={() => { setIsEditMode(!isEditMode) }}
+      >Edit ✏️</StyledEditButton>
+      <StyledDeleteButton>Delete 🗑️</StyledDeleteButton>
+
+      <br />
       <StyledLink href="/">Back to all</StyledLink>
     </ProductCard>
   );
